@@ -1,0 +1,77 @@
+<WEBOBJECT NAME=EditToolbar>
+
+	<WEBOBJECT NAME=Form1>
+	<div class="backEndForm">
+	
+	<table border="0" cellpadding="2" cellspacing="0">
+
+	<tr>
+		<th>Issue</th>
+		<td class="backEndCell">
+			<webobject name=IssueList></WEBOBJECT>
+			<WEBOBJECT NAME=GetStoriesButton></WEBOBJECT>
+		</td>
+	</tr>
+
+	<webobject NAME=PopUpsCondition>
+	<tr>
+		<th>Front Style</th>
+		<td><WEBOBJECT NAME=StylePopUp></WEBOBJECT></td>
+	</tr>
+
+	<tr><th>Story 1</th><td><webobject name=StoryList1></webobject></td></tr>
+	<tr><th>Story 2</th><td><webobject name=StoryList2></webobject></td></tr>
+	<tr><th>Story 3</th><td><webobject name=StoryList3></webobject></td></tr>
+	<tr><th>Story 4</th><td><webobject name=StoryList4></webobject></td></tr>
+	<tr><th>Story 5</th><td><webobject name=StoryList5></webobject></td></tr>
+	<tr><th>Photo 1</th><td><webobject NAME=PhotoList1></webobject></td></tr>
+	<tr><th>Photo 2</th><td><WEBOBJECT NAME=PhotoList2></WEBOBJECT></td></tr>
+	</webobject>
+	
+	<WEBOBJECT NAME=HTMLBoxCondition>
+	<tr><th>Issue Front (html)</th>
+		<td><WEBOBJECT NAME=IssueFrontContent></WEBOBJECT></td>
+	</tr>
+	</WEBOBJECT>
+	
+	<WEBOBJECT NAME=ButtonCondition>
+	<tr>
+		<td></td>
+		<td>
+		<WEBOBJECT NAME=ShowAddButton><webobject name=AddButton></webobject></WEBOBJECT>
+		<WEBOBJECT NAME=ShowUpdateButton><webobject name=UpdateButton></webobject></WEBOBJECT>
+		</td>
+	</tr>
+	</WEBOBJECT>
+	
+	</table>
+
+	</div>
+
+	<div class="backEndList">
+	
+	<P>Displaying issue front(s) <WEBOBJECT NAME=FirstItem></WEBOBJECT> to <WEBOBJECT NAME=LastItem></WEBOBJECT> [of <WEBOBJECT NAME=TotalItemsFound></WEBOBJECT>].  <WEBOBJECT NAME=MultiBatchCondition> [<WEBOBJECT NAME=PreviousBatch>Previous</WEBOBJECT> | <WEBOBJECT NAME=NextBatch>Next</WEBOBJECT>]</WEBOBJECT><BR></P>
+
+	
+	<TABLE BORDER=0 CELLPADDING=3 CELLSPACING=0>
+	<TR>
+	<TH>Issue</TH>
+	<TD></TD><TH></TH>
+	<TH></TH>
+	</TR>
+	
+	<WEBOBJECT NAME=Repetition2>
+	    <TR class="backEndRow">
+		<TD class="backEndCell"><WEBOBJECT NAME=ItemDate></WEBOBJECT></TD>
+		<TD><WEBOBJECT NAME=PreviewLink>preview</WEBOBJECT></TD><TD><WEBOBJECT NAME=EditLink>edit</WEBOBJECT></TD>
+		<TD><WEBOBJECT NAME=DeleteLink>delete</WEBOBJECT></TD>
+	    </TR>
+	</WEBOBJECT>
+	
+	</table>
+
+	</div>
+
+	</WEBOBJECT>
+	
+</webobject>

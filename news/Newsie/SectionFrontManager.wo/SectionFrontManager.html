@@ -1,0 +1,105 @@
+<WEBOBJECT NAME=EditToolbar>
+
+	<WEBOBJECT NAME=Form1>
+	<div class="backEndForm">
+	
+	<WEBOBJECT NAME=FormIncompleteCondition>
+	<P CLASS=warning>You must select the section, issue and front style before adding the section front.</P>
+	</WEBOBJECT>
+
+	<WEBOBJECT NAME=CantGetPhotosCondition>
+	<P CLASS=warning>You must select the section and issue before clicking "Get Photos".</P>
+	</WEBOBJECT>
+
+	<table border="0" cellpadding="0" cellspacing="2">
+
+	<tr>
+		<th>Issue</th>
+		<td>
+			<webobject name=IssueListPopUp></WEBOBJECT>
+		</td>
+	</tr>
+
+	<webobject name=SectionCondition>
+	<tr>
+		<th>Section</th>
+		<td>
+			<webobject name=SectionListPopUp></webobject> 
+		</td>
+	</tr>
+
+	<tr>
+		<th></th>
+		<td>
+			<webobject NAME=GetPhotosButton></webobject>
+		</td>
+	</tr>
+
+	</webobject>
+
+	<webobject NAME=PhotoListCondition>
+	<tr>
+		<th>Photo</th>
+		<td><webobject name=PhotoListPopUp></webobject></td>
+	</tr>
+	</webobject>
+
+	<webobject NAME=FrontStyleCondition>
+	<tr>
+		<th>Front Style</th>
+		<td><WEBOBJECT NAME=StylePopUp></WEBOBJECT></td>
+	</tr>
+	</webobject>
+	
+
+	<webobject name=SectionFrontHtmlCondition>
+	<tr>
+		<th>Section Front (html)</th>
+		<td><WEBOBJECT NAME=SectionFrontContent></WEBOBJECT></td>
+	</tr>
+	</webobject>
+
+	<tr>
+		<td></td>
+		<td>
+		<WEBOBJECT NAME=ShowAddButton><webobject name=AddButton></webobject></WEBOBJECT>
+		<WEBOBJECT NAME=ShowUpdateButton><webobject name=UpdateButton></webobject></WEBOBJECT>
+		</td>
+	</tr>
+	
+	</table>
+
+	</div>
+
+	<div class="backEndList">
+	
+	<P>Displaying section front(s) <WEBOBJECT NAME=FirstItem></WEBOBJECT> to <WEBOBJECT NAME=LastItem></WEBOBJECT> [of <WEBOBJECT NAME=TotalItemsFound></WEBOBJECT>].  <WEBOBJECT NAME=MultiBatchCondition> [<WEBOBJECT NAME=PreviousBatch>Previous</WEBOBJECT> | <WEBOBJECT NAME=NextBatch>Next</WEBOBJECT>]</WEBOBJECT><BR></P>
+	
+	<P>Show section fronts from issue <WEBOBJECT NAME=IssuePopUpBottom></WEBOBJECT> in section <WEBOBJECT NAME=SectionPopUpBottom></WEBOBJECT> <WEBOBJECT NAME=GetSectionFrontsButton></WEBOBJECT></P>
+	
+	
+	<TABLE BORDER=0 CELLPADDING=3 CELLSPACING=0>
+	<TR>
+	<TH>Issue</TH>
+	<TH>Section</TH>
+	<td></td><TH></TH>
+	<TH></TH>
+	</TR>
+	
+	<WEBOBJECT NAME=Repetition2>
+	    <TR class="backEndRow">
+		<TD class="backEndCell"><WEBOBJECT NAME=ItemDate></WEBOBJECT></TD>
+		<TD class="backEndCell"><WEBOBJECT NAME=ItemSectionName></WEBOBJECT></TD>
+		<td><webobject NAME=PreviewLink>preview</webobject></td>
+		<TD><WEBOBJECT NAME=EditLink>edit</WEBOBJECT></TD>
+		<TD><WEBOBJECT NAME=DeleteLink>delete</WEBOBJECT></TD>
+	    </TR>
+	</WEBOBJECT>
+	
+	</table>
+
+	</div>
+
+	</WEBOBJECT>
+	
+</webobject>

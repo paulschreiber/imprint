@@ -1,0 +1,80 @@
+EditToolbar: EditToolbar {
+
+}
+
+ShowAddButton: WOConditional {
+	condition = showAddButton;
+}
+
+ShowUpdateButton: WOConditional {
+	condition = showUpdateButton;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+ColumnName: WOTextField {
+	value = column.columnName;
+	name = "ColumnName";
+}
+
+ActiveColumn: WOCheckBox {
+	checked = column.active;
+	name = "activeColumn";
+}
+
+AddButton: WOSubmitButton {
+	action = addColumn;
+	value = "Add";
+	name = "Add";
+}
+
+UpdateButton: WOSubmitButton {
+	action = updateColumn;
+	value = "Update";
+	name = "Update";
+}
+
+FirstItem: WOString {
+	value = displayGroup.indexOfFirstDisplayedObject;
+}
+
+LastItem: WOString {
+	value = displayGroup.indexOfLastDisplayedObject;
+}
+
+TotalItemsFound: WOString {
+	value = displayGroup.allObjects.count;
+}
+
+MultiBatchCondition: WOConditional {
+	condition = displayGroup.hasMultipleBatches;
+}
+
+PreviousBatch: WOHyperlink {
+	action = displayGroup.displayPreviousBatch;
+}
+
+NextBatch: WOHyperlink {
+	action = displayGroup.displayNextBatch;
+}
+
+Repetition2: WORepetition {
+	item = columnItem;
+	list = displayGroup.displayedObjects;
+}
+
+ItemName: WOString {
+	value = columnItem.columnName;
+}
+
+EditLink: WOHyperlink {
+	action = editColumn;
+}
+
+DeleteLink: WOHyperlink {
+	action = deleteColumn;
+}
+
+

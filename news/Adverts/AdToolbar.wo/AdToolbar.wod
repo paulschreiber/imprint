@@ -1,0 +1,33 @@
+PageTitle: WOString {
+        value = session.pageTitle;
+}
+
+NavTitle: WOString {
+	value = session.pageTitle;
+}
+
+ParentContent: WOComponentContent {};
+
+Advertisers: WOHyperlink {
+	pageName = "AdvertiserManager";
+}
+
+ClassifiedAds: WOHyperlink {
+	pageName = "AdClassifiedManager";
+}
+
+ClassifiedSections: WOHyperlink {
+	pageName = "AdSectionManager";
+}
+
+Advertisers2: WOHyperlink {
+	pageName = "AdvertiserManager";
+}
+
+Creatives: WOHyperlink {
+	pageName = "AdCreativeManager";
+}
+
+Placement: WOHyperlink {
+	pageName = "AdPlacementManager";
+}

@@ -1,0 +1,19 @@
+ReaderTopBar: ReaderTopBar {}
+
+IssueFoundCondition: WOConditional {
+	condition = noIssueFound;
+	negate = true;
+}
+
+Content: WOString {
+	value = issueFront.content;
+	escapeHTML = false;
+}
+
+LiteLink: WOHyperlink {
+	href = issueFront.linkLite;
+}
+
+NoIssueFoundCondition: WOConditional {
+	condition = noIssueFound;
+}

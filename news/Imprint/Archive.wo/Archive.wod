@@ -1,0 +1,47 @@
+ReaderTopBar: ReaderTopBar {}
+
+PreviousBatchConditional: WOConditional {
+	condition = existPreviousBatches;
+}
+
+PreviousBatch: WOHyperlink {
+	directActionName = "archive";
+	actionClass = "DirectAction";
+	?wosid = "NO";
+	?batchIndex = batchIndexMinusOne;
+}
+
+OtherBatchConditional: WOConditional {
+	condition = existOtherBatches;
+}
+
+NextLinkCondition: WOConditional {
+	condition = existMoreBatches;
+}
+
+NextBatch: WOHyperlink {
+	directActionName = "archive";
+	actionClass = "DirectAction";
+	?wosid = "NO";
+	?batchIndex = batchIndexPlusOne;
+}
+
+IssueRepetition: WORepetition {
+	item = issueFront;
+	list = displayGroup.displayedObjects;
+}
+
+IssueDateLink: WOHyperlink {
+	?date = issueFront.issue.compactDate;
+	actionClass = "DirectAction";
+	directActionName = "issue";
+}
+
+IssueDateString: WOString {
+	value = issueFront.issue.date;
+	dateformat = "%B %d, %Y";
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}

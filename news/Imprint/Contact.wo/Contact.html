@@ -1,0 +1,134 @@
+<WEBOBJECT NAME=ReaderTopBar>
+
+<h1>Contacting <i>Imprint</i></h1>
+
+<p class="bodyText">
+Editor-in-chief: <a href="mailto:editor@imprint.uwaterloo.ca">editor@imprint.uwaterloo.ca</a>
+<br>Letters to the Editor: <a href="mailto:letters@imprint.uwaterloo.ca">letters@imprint.uwaterloo.ca</a>
+<br>Web site comments: <a href="mailto:web@imprint.uwaterloo.ca">web@imprint.uwaterloo.ca</a>
+<br>Board of Directors: <a href="mailto:board@imprint.uwaterloo.ca">board@imprint.uwaterloo.ca</a>
+</p>
+
+<p class="bodyText">Student Life Centre, Room 1116
+<br>University of Waterloo
+<br>Waterloo, Ontario N2L 3G1
+<br>tel: 519-888-4048
+<br>fax: 519-884-7800
+</p>
+
+<hr noshade>
+
+<h2>Online feedback</h2>
+
+<webobject name=FormSubmitted>Thanks for the feedback!</webobject>
+
+<webobject name=FormNotSubmitted>
+<webobject name=Form1>
+
+	<table border="0" cellpadding="2" cellspacing="0" width="100%">
+	<tr>
+		<th>Topic</th>
+		<td>
+			<webobject name=TopicPopUp></webobject>
+			<webobject name=ChooseTopicButton></webobject>
+		</td>
+	</tr>
+
+<webobject name=VolunteerCondition>
+	<tr>
+		<th>Areas of interest</th>
+		<td class="backEndCell">
+			<table border="0" cellpadding="1" cellspacing="0" width="100%">
+			<tr>
+			<td><webobject name=ArtsCheckbox></webobject> Arts</td>
+			<td><webobject name=FeaturesCheckbox></webobject> Features</td>
+			<td><webobject name=ForumCheckbox></webobject> Forum</td>
+			<td><webobject name=NewsCheckbox></webobject> News</td>
+			<td><webobject name=SysAdminCheckbox></webobject>
+				Sysadmin</td>
+			</tr>
+			<tr>
+			<td><webobject name=ScienceCheckbox></webobject> Science</td>
+			<td><webobject name=SportsCheckbox></webobject> Sports</td>
+			<td><webobject name=WebCheckbox></webobject> Web</td>
+			<td><webobject name=GraphicsCheckbox></webobject> Graphics</td>
+			<td><webobject name=PhotoCheckbox></webobject> Photography</td>
+			</table>
+		</td>
+	</tr>
+</webobject>
+
+<webobject name=SomethingMissingCondition>
+	<tr>
+		<th></th>
+		<td>
+
+		<webobject name=UserInfoMissingCondition>
+		<p class="warning">Please fill in your name, email and phone number.</p>
+		</webobject>
+
+		<webobject name=LetterInfoMissingCondition>
+		<p class="warning">Please fill in your year and program (or title and department) as well as the letter itself.</p>
+		</webobject>
+
+		<webobject name=CorrectionInfoMissingCondition>
+		<p class="warning">Please fill in the article date and title and describe the error.</p>
+		</webobject>
+
+		<webobject name=ArticleInfoMissingCondition>
+		<p class="warning">Please paste in the article or attach it to the form.</p>
+		</webobject>
+
+		</td>
+	</tr>
+</webobject>
+
+<webobject name=UserInfoCondition>
+	<tr><th>Name</th><td><webobject name=UserName></webobject></td></tr>
+	<tr><th>Email</th><td><webobject name=UserEmail></webobject></td></tr>
+	<tr><th>Phone number</th><td><webobject name=UserPhone></webobject></td></tr>
+</webobject>
+
+<webobject name=CorrectionCondition>
+	<tr><th>Program of study</th><td><webobject name=Program></webobject></td></tr>
+	<tr><th>Year in school</th><td><webobject name=Year></webobject></td></tr>
+</webobject>
+
+<webobject name=LetterCondition>
+	<tr><th>Article title</th><td><webobject name=ArticleTitle></webobject></td></tr>
+	<tr><th>Article date</th><td><webobject name=ArticleDate></webobject></td></tr>
+</webobject>
+
+<webobject name=AttachFileCondition>
+	<tr>
+		<th>Attach article/graphic</th>
+		<td><WEBOBJECT NAME=FileUpload></WEBOBJECT></td>
+	</tr>
+</webobject>
+
+<webobject name=TextFieldCondition>
+	<tr>
+		<td></td>
+		<td>
+		<webobject name=UserFeedback></webobject>
+		</td>
+	</tr>
+</webobject>
+	
+<webobject name=SubmitFormCondition>
+	<tr>
+		<td></td>
+		<td>
+			<webobject name=SubmitFeedback></webobject>
+			<input type="hidden" name="submitForm" value="1">
+		</td>
+	</tr>
+</webobject>
+	</table>
+
+</webobject>
+</webobject>
+
+
+
+</webobject>

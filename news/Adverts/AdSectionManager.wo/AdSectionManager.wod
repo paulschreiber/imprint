@@ -1,0 +1,64 @@
+AdToolbar: AdToolbar {}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+AdSection: WOTextField {
+	value = adSection.sectionName;
+	name = "AdSection";
+}
+
+AddButton: WOSubmitButton {
+	action = addAdSection;
+	value = "Add";
+	name = "Add";
+}
+
+UpdateButton: WOSubmitButton {
+	action = updateAdSection;
+	value = "Update";
+	name = "Update";
+}
+
+FirstItem: WOString {
+	value = displayGroup.indexOfFirstDisplayedObject;
+}
+
+LastItem: WOString {
+	value = displayGroup.indexOfLastDisplayedObject;
+}
+
+TotalItemsFound: WOString {
+	value = displayGroup.allObjects.count;
+}
+
+MultiBatchCondition: WOConditional {
+	condition = displayGroup.hasMultipleBatches;
+}
+
+PreviousBatch: WOHyperlink {
+	action = displayGroup.displayPreviousBatch;
+}
+
+
+NextBatch: WOHyperlink {
+	action = displayGroup.displayNextBatch;
+}
+
+Repetition2: WORepetition {
+	item = adSectionItem;
+	list = displayGroup.displayedObjects;
+}
+
+ItemAdSectionName: WOString {
+	value = adSectionItem.sectionName;
+}
+
+EditLink: WOHyperlink {
+	action = editAdSection;
+}
+
+DeleteLink: WOHyperlink {
+	action = deleteAdSection;
+}

@@ -1,0 +1,25 @@
+ReaderTopBar: ReaderTopBar {}
+
+SectionRepetition: WORepetition {
+	item = sectionItem;
+	list = sectionList;
+}
+
+ClassifiedSectionLink: WOHyperlink {
+	?date = session.compactDate;
+	actionClass = "DirectAction";
+	directActionName = "classifiedAds";
+	?wosid = "NO";
+	?section = sectionItem.sectionName;
+	string = sectionItem.sectionName;
+	"class" = "frontPageLink";
+}
+
+NoSectionsConditional: WOConditional {
+	condition = sectionList.count;
+	negate = true;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}

@@ -1,0 +1,34 @@
+#
+# General Settings
+#
+PublicationName=Imprint
+BatchSize=10
+AdPrefixSize=50
+CaptionPrefixSize=30
+TitleSpacer=\ | 
+BackendTitleSpacer=: 
+LetterToEditorIntro=To the Editor,
+EditorsResponse=Editor's Response:
+BlankByline=n/a
+PublicationStartYear=2001
+CanConIndicator=<img src="/images/flag.gif" height="19" width="20" alt="C">
+#
+# email stuff, mostly for feedback
+#
+MailingListHost=imprint.uwaterloo.ca
+FeedbackSender=web.feedback@imprint.uwaterloo.ca
+FeedbackRecipient=editor@imprint.uwaterloo.ca
+LettersRecipient=letters@imprint.uwaterloo.ca
+ClassifiedsRecipient=ads@imprint.uwaterloo.ca
+ClassifiedsSender=web.classifieds@imprint.uwaterloo.ca
+AdContactRecipient=ads@imprint.uwaterloo.ca
+AdContactSender=web.ad.request@imprint.uwaterloo.ca
+SmtpHost=imprint2.uwaterloo.ca
+JavaMailDebug=true
+#
+# path to images and corresponding URLs
+#
+AssetPath=/home/sites/imprint
+#AssetPath=/Library/WebServer/Documents
+AssetUrl=/images
+AdUrl=/ad

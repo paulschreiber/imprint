@@ -1,0 +1,111 @@
+AdToolbar: AdToolbar {}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+SectionPopUp: WOPopUpButton {
+	list = adSectionList;
+	name = "adSection";
+	noSelectionString = "[choose ad section]";
+	item = adSectionItem;
+	displayString = adSectionItem.sectionName;
+	selection = adClassified.adSection;
+}
+
+IssuePopUp: WOPopUpButton {
+	list = issueList;
+	name = "issue";
+	noSelectionString = "[choose issue]";
+	item = issueItem;
+	displayString = issueItem.IsoDate;
+	selection = adClassified.issue;
+}
+
+AdvertiserPopUp: WOPopUpButton {
+	list = advertiserList;
+	name = "advertiser";
+	noSelectionString = "[choose advertiser]";
+	item = advertiserItem;
+	displayString = advertiserItem.company;
+	selection = adClassified.advertiser;
+}
+
+ClassifiedAdText: WOText {
+	value = adClassified.ad;
+	cols = 70;
+	rows = 5;
+}
+
+AddButton: WOSubmitButton {
+	action = addAdClassified;
+	value = "Add";
+	name = "Add";
+}
+
+UpdateButton: WOSubmitButton {
+	action = updateAdClassified;
+	value = "Update";
+	name = "Update";
+}
+
+FirstItem: WOString {
+	value = displayGroup.indexOfFirstDisplayedObject;
+}
+
+LastItem: WOString {
+	value = displayGroup.indexOfLastDisplayedObject;
+}
+
+TotalItemsFound: WOString {
+	value = displayGroup.allObjects.count;
+}
+
+
+MultiBatchCondition: WOConditional {
+	condition = displayGroup.hasMultipleBatches;
+}
+
+PreviousBatch: WOHyperlink {
+	action = displayGroup.displayPreviousBatch;
+}
+
+NextBatch: WOHyperlink {
+	action = displayGroup.displayNextBatch;
+}
+
+IssuePopUpBottom: WOPopUpButton {
+	list = issueList;
+	name = "issueForDG";
+	noSelectionString = "[choose issue]";
+	item = selectedIssueItem;
+	displayString = selectedIssueItem.IsoDate;
+	selection = selectedIssueItem;
+}
+
+GetAdsButton: WOSubmitButton {
+	action = GetIssueAds;
+	value = "Get Ads";
+}
+
+Repetition2: WORepetition {
+	item = adClassifiedItem;
+	list = displayGroup.displayedObjects;
+}
+
+AdPrefix: WOString {
+	value = adClassifiedItem.adPrefix;
+}
+
+PreviewLink: WOHyperlink {
+	href = adClassifiedItem.linkPreview;
+	target = "_blank";
+}
+
+EditLink: WOHyperlink {
+	action = editAdClassified;
+}
+
+DeleteLink: WOHyperlink {
+	action = deleteAdClassified;
+}

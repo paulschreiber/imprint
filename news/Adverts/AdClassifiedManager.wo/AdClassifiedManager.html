@@ -1,0 +1,59 @@
+<webobject name=AdToolbar>
+
+	<webobject name=Form1>
+	<div class="backEndForm">
+
+	<table border="0" cellpadding="2" cellspacing="0">
+
+	<tr><th>Section</th><td><webobject NAME=SectionPopUp></webobject></td></tr>
+	<tr><th>Issue</th><td><webobject NAME=IssuePopUp></webobject></td></tr>
+	<tr><th>Advertiser</th><td><webobject NAME=AdvertiserPopUp></webobject></td></tr>
+	<tr><th>Classified Ad</th><td><webobject name=ClassifiedAdText></webobject></td></tr>
+	
+	<tr><td></td>
+		<td>
+			<webobject NAME=AddButton></webobject>
+			<webobject NAME=UpdateButton></webobject>
+		</td>
+	</tr>
+	
+	</table>
+	
+	</div>
+
+	<div class="backEndList">
+		
+	<p>Displaying issue(s)
+		<webobject name=FirstItem></webobject>
+		to
+		<webobject name=LastItem></webobject>
+		[of
+		<webobject name=TotalItemsFound></webobject>].
+		<WEBOBJECT NAME=MultiBatchCondition>
+		[<webobject name=PreviousBatch>Previous</webobject>
+		|
+		<webobject name=NextBatch>Next</webobject>]
+		</webobject><br></p>
+		
+	<P>Show stories from issue <WEBOBJECT NAME=IssuePopUpBottom></WEBOBJECT> <WEBOBJECT NAME=GetAdsButton></WEBOBJECT></P><table border=0 cellpadding=3 cellspacing=0>
+	<tr>
+		<th>Ad</th>
+		<TD></TD><th></th>
+		<th></th>
+	</tr>
+	
+	<webobject name=Repetition2>
+	    <TR class="backEndRow">
+			<td class="backEndCell"><webobject NAME=AdPrefix></webobject></td>
+			<TD><WEBOBJECT NAME=PreviewLink>preview section</WEBOBJECT></TD><td><webobject NAME=EditLink>edit</webobject></td>
+			<td><webobject NAME=DeleteLink>delete</webobject></td>
+		</tr>
+	</webobject>
+
+	</table>
+
+	</div>
+
+	</WEBOBJECT>
+
+</WEBOBJECT>

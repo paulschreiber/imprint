@@ -1,0 +1,109 @@
+AssetRepetition: WORepetition {
+	list = assetList;
+	item = assetItem;
+}
+
+AssetEmbedCondition: WOConditional {
+	condition = assetItem.isEmbedded;
+}
+
+AssetEmbed: WOEmbeddedObject {
+	autostart = "false";
+	bgcolor = "#FFFec4";
+	class = "photo";
+	src = assetItem.location;
+}
+
+AsssetImageCondition: WOConditional {
+	condition = assetItem.isImage;
+}
+
+
+Image1: WOImage {
+	alt = assetItem.caption;
+	class = "frontPagePhoto";
+	height = assetItem.height;
+	src = assetItem.location;
+	width = assetItem.width;
+}
+
+AssetDownloadCondition: WOConditional {
+	condition = assetItem.isDownloadable;
+}
+
+AssetDownloadLink: WOHyperlink {
+	href = assetItem.location;
+	string = assetItem.fileName;
+}
+
+Credit1: WOString {
+	value = assetItem.AuthorNamesText;
+	escapeHTML = false;
+}
+
+CaptionCondition: WOConditional {
+	condition = assetItem.hideCaption;
+	negate = true;
+}
+
+Caption: WOString {
+	value = assetItem.caption;
+	escapeHTML = false;
+}
+
+StoryRepetition: WORepetition {
+	item = storyItem;
+	list = storyList;
+}
+
+Headline: WOString {
+	value = storyItem.headline;
+	escapeHTML = false;
+}
+
+LedeCondition: WOConditional {
+	condition = storyItem.lede.length;
+}
+
+Lede: WOString {
+	value = storyItem.lede;
+	escapeHTML = false;
+}
+
+BylineCondition: WOConditional {
+	condition = storyItem.AuthorNamesText.length;
+}
+
+AuthorName: WOString {
+	value = storyItem.AuthorNamesText;
+}
+
+NoLedeCondition: WOConditional {
+	negate = true;
+	condition = storyItem.lede.length;
+}
+
+LetterCondition: WOConditional {
+	condition = letterList.count;
+}
+
+LetterRepetition: WORepetition {
+	item = storyItem;
+	list = letterList;
+}
+
+LetterHeadline: WOString {
+	value = storyItem.headline;
+}
+
+Photo1: WOString {
+	value = photo1;
+}
+
+LetterLink: WOString {
+	value = storyItem.link;
+}
+
+StoryLink: WOString {
+	value = storyItem.link;
+}

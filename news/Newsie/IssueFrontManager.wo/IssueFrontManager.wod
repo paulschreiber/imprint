@@ -1,0 +1,182 @@
+EditToolbar: EditToolbar {}
+
+ShowAddButton: WOConditional {
+	condition = showAddButton;
+}
+
+ShowUpdateButton: WOConditional {
+	condition = showUpdateButton;
+}
+
+MultiBatchCondition: WOConditional {
+	condition = displayGroup.hasMultipleBatches;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+IssueList: WOPopUpButton {
+	list = issueList;
+	name = "issue";
+	noSelectionString = "[choose issue]";
+	item = issueItem;
+	displayString = issueItem.IsoDate;
+	selection = issueFront.issue;
+}
+
+GetStoriesButton: WOSubmitButton {
+	action = GetCurrentIssueStories;
+	value = "Get Stories";
+	name = "GetStories";
+}
+
+PopUpsCondition: WOConditional {
+	condition = showPopUps;
+}
+
+StylePopUp: WOPopUpButton {
+	list = frontNameList;
+	noSelectionString = "[choose style]";
+	selection = frontName;
+}
+
+StoryList1: WOPopUpButton {
+	list = storyList;
+	name = "story1";
+	noSelectionString = "[choose story]";
+	item = storyItem1;
+	displayString = storyItem1.headline;
+	selection = storyItem1;
+}
+
+StoryList2: WOPopUpButton {
+	list = storyList;
+	name = "story2";
+	noSelectionString = "[choose story]";
+	item = storyItem2;
+	displayString = storyItem2.headline;
+	selection = storyItem2;
+}
+
+StoryList3: WOPopUpButton {
+	list = storyList;
+	name = "story3";
+	noSelectionString = "[choose story]";
+	item = storyItem3;
+	displayString = storyItem3.headline;
+	selection = storyItem3;
+}
+
+StoryList4: WOPopUpButton {
+	list = storyList;
+	name = "story4";
+	noSelectionString = "[choose story]";
+	item = storyItem4;
+	displayString = storyItem4.headline;
+	selection = storyItem4;
+}
+
+StoryList5: WOPopUpButton {
+	list = storyList;
+	name = "story5";
+	noSelectionString = "[choose story]";
+	item = storyItem5;
+	displayString = storyItem5.headline;
+	selection = storyItem5;
+}
+
+PhotoList1: WOPopUpButton {
+	list = assetList;
+	name = "asset1";
+	noSelectionString = "[choose photo]";
+	item = assetItem1;
+	displayString = assetItem1.captionPrefix;
+	selection = assetItem1;
+}
+
+PhotoList2: WOPopUpButton {
+	list = assetList;
+	name = "asset2";
+	noSelectionString = "[choose photo]";
+	item = assetItem2;
+	displayString = assetItem2.captionPrefix;
+	selection = assetItem2;
+}
+
+HTMLBoxCondition: WOConditional {
+	condition = issueFront.content.length;
+}
+
+IssueFrontContent: WOText {
+	cols = 80;
+	name = "issueFront";
+	rows = 15;
+	value = issueFront.content;
+}
+
+ButtonCondition: WOConditional {
+	condition = showButtons;
+}
+
+AddButton: WOSubmitButton {
+	action = addIssueFront;
+	value = "Add";
+	name = "Add";
+}
+
+UpdateButton: WOSubmitButton {
+	action = updateIssueFront;
+	value = "Update";
+	name = "Update";
+}
+
+FirstItem: WOString {
+	value = displayGroup.indexOfFirstDisplayedObject;
+}
+
+LastItem: WOString {
+	value = displayGroup.indexOfLastDisplayedObject;
+}
+
+TotalItemsFound: WOString {
+	value = displayGroup.allObjects.count;
+}
+
+PreviousBatch: WOHyperlink {
+	action = displayGroup.displayPreviousBatch;
+}
+
+NextBatch: WOHyperlink {
+	action = displayGroup.displayNextBatch;
+}
+
+Repetition2: WORepetition {
+	item = issueFrontItem;
+	list = displayGroup.displayedObjects;
+}
+
+ItemDate: WOString {
+	value = issueFrontItem.issue.date;
+	dateformat = "%B %d, %Y";
+}
+
+PreviewLink: WOHyperlink {
+	href = issueFrontItem.linkPreview;
+	target = "_blank";
+}
+
+EditLink: WOHyperlink {
+	action = editIssueFront;
+}
+
+DeleteLink: WOHyperlink {
+	action = deleteIssueFront;
+}
+
+IssueFrontContent2: WOText {
+	value = issueFront.content;
+	cols = 70;
+	name = "issueFront";
+	rows = 10;
+}

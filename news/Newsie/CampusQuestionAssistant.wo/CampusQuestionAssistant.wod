@@ -1,0 +1,232 @@
+EditToolbar: EditToolbar {}
+
+Form1: WOForm {
+	enctype = "multipart/form-data";
+	multipleSubmit = true;
+}
+
+name1: WOTextField {
+	name = "name1";
+	value = name1;
+}
+
+name2: WOTextField {
+	name = "name2";
+	value = name2;
+}
+
+program1: WOTextField {
+	name = "program1";
+	value = program1;
+}
+
+program2: WOTextField {
+	name = "program2";
+	value = program2;
+}
+
+quote1: WOText {
+	name = "quote1";
+	value = quote1;
+	cols = 20;
+	rows = 3;
+}
+
+quote2: WOText {
+	name = "quote2";
+	value = quote2;
+	cols = 20;
+	rows = 3;
+}
+
+photo1: WOFileUpload {
+	data = fileData1;
+	filePath = fileName1;
+}
+
+photo2: WOFileUpload {
+	filePath = fileName2;
+	data = fileData2;
+}
+
+name3: WOTextField {
+	name = "name3";
+	value = name3;
+}
+
+name4: WOTextField {
+	name = "name4";
+	value = name4;
+}
+
+program3: WOTextField {
+	name = "program3";
+	value = program3;
+}
+
+program4: WOTextField {
+	name = "program4";
+	value = program4;
+}
+
+quote3: WOText {
+	name = "quote3";
+	value = quote3;
+	cols = 20;
+	rows = 3;
+}
+
+quote4: WOText {
+	name = "quote4";
+	value = quote4;
+	cols = 20;
+	rows = 3;
+}
+
+photo3: WOFileUpload {
+	filePath = fileName3;
+	data = fileData3;
+}
+
+photo4: WOFileUpload {
+	filePath = fileName4;
+	data = fileData4;
+}
+
+name5: WOTextField {
+	name = "name5";
+	value = name5;
+}
+
+name6: WOTextField {
+	name = "name6";
+	value = name6;
+}
+
+program5: WOTextField {
+	name = "program5";
+	value = program5;
+}
+
+program6: WOTextField {
+	name = "program6";
+	value = program6;
+}
+
+quote5: WOText {
+	name = "quote5";
+	value = quote5;
+	cols = 20;
+	rows = 3;
+}
+
+quote6: WOText {
+	name = "quote6";
+	value = quote6;
+	cols = 20;
+	rows = 3;
+}
+
+photo5: WOFileUpload {
+	filePath = fileName5;
+	data = fileData5;
+}
+
+photo6: WOFileUpload {
+	filePath = fileName6;
+	data = fileData6;
+}
+
+name7: WOTextField {
+	name = "name7";
+	value = name7;
+}
+
+name8: WOTextField {
+	name = "name8";
+	value = name8;
+}
+
+program7: WOTextField {
+	name = "program7";
+	value = program7;
+}
+
+program8: WOTextField {
+	name = "program8";
+	value = program8;
+}
+
+quote7: WOText {
+	name = "quote7";
+	value = quote7;
+	cols = 20;
+	rows = 3;
+}
+
+quote8: WOText {
+	name = "quote8";
+	value = quote8;
+	cols = 20;
+	rows = 3;
+}
+
+photo7: WOFileUpload {
+	filePath = fileName7;
+	data = fileData7;
+}
+
+photo8: WOFileUpload {
+	filePath = fileName8;
+	data = fileData8;
+}
+
+name9: WOTextField {
+	name = "name9";
+	value = name9;
+}
+
+name10: WOTextField {
+	name = "name10";
+	value = name10;
+}
+
+program9: WOTextField {
+	name = "program9";
+	value = program9;
+}
+
+program10: WOTextField {
+	name = "program10";
+	value = program10;
+}
+
+quote9: WOText {
+	name = "quote9";
+	value = quote9;
+	cols = 20;
+	rows = 3;
+}
+
+quote10: WOText {
+	name = "quote10";
+	value = quote10;
+	cols = 20;
+	rows = 3;
+}
+
+photo9: WOFileUpload {
+	filePath = fileName9;
+	data = fileData9;
+}
+
+photo10: WOFileUpload {
+	filePath = fileName10;
+	data = fileData10;
+}
+
+SubmitButton: WOSubmitButton {
+	action = ProcessCampusQuestion;
+	name = "submitForm";
+	value = "Save Campus Question";
+}

@@ -1,0 +1,51 @@
+ColumnConditional: WOConditional {
+	condition = story.column.columnName.length;
+}
+
+Headline: WOString {
+	value = story.headline;
+}
+
+SubheadConditional: WOConditional {
+	condition = story.subhead.length;
+}
+
+Subhead: WOString {
+	value = story.subhead;
+}
+
+AuthorName: WOString {
+	value = story.AuthorNames;
+	escapeHTML = false;
+}
+
+Byline: WOString {
+	value = story.AuthorTitles;
+	escapeHTML = false;
+}
+
+StoryContents: WOString {
+	value = story.contents;
+	escapeHTML = false;
+}
+
+SectionName: WOString {
+	value = story.section.sectionName;
+}
+
+AuthorEmail: WOString {
+	value = story.author.email;
+}
+
+StoryType: WOString {
+	value = story.storyType.storyType;
+}
+
+IssueDate: WOString {
+	dateformat = "%m/%d/%y %H:%M:%S";
+	value = story.issue.date;
+}
+
+ColumnName: WOString {
+	value = story.column.columnName;
+}

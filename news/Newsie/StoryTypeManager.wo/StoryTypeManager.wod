@@ -1,0 +1,75 @@
+EditToolbar: EditToolbar {}
+
+ShowAddButton: WOConditional {
+	condition = showAddButton;
+}
+
+ShowUpdateButton: WOConditional {
+	condition = showUpdateButton;
+}
+
+MultiBatchCondition: WOConditional {
+	condition = displayGroup.hasMultipleBatches;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+StoryType: WOTextField {
+	value = storyType.storyType;
+	name = "StoryType";
+}
+
+AddButton: WOSubmitButton {
+	action = addStoryType;
+	value = "Add";
+	name = "Add";
+}
+
+UpdateButton: WOSubmitButton {
+	action = updateStoryType;
+	value = "Update";
+	name = "Update";
+}
+
+FirstItem: WOString {
+	value = displayGroup.indexOfFirstDisplayedObject;
+}
+
+LastItem: WOString {
+	value = displayGroup.indexOfLastDisplayedObject;
+}
+
+TotalItemsFound: WOString {
+	value = displayGroup.allObjects.count;
+}
+
+PreviousBatch: WOHyperlink {
+	action = displayGroup.displayPreviousBatch;
+}
+
+NextBatch: WOHyperlink {
+	action = displayGroup.displayNextBatch;
+}
+
+Repetition2: WORepetition {
+	item = storyTypeItem;
+	list = displayGroup.displayedObjects;
+}
+
+ItemStoryType: WOString {
+	value = storyTypeItem.storyType;
+}
+
+EditLink: WOHyperlink {
+	action = editStoryType;
+}
+
+DeleteLink: WOHyperlink {
+	action = deleteStoryType;
+}
+
+DeleteLink2: WOHyperlink {
+	action = deleteStoryType;
+}

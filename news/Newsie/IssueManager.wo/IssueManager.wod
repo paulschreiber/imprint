@@ -1,0 +1,91 @@
+EditToolbar: EditToolbar {}
+
+ShowAddButton: WOConditional {
+	condition = showAddButton;
+}
+
+ShowUpdateButton: WOConditional {
+	condition = showUpdateButton;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+IssueDateField: WOTextField {
+	value = issue.date;
+	dateformat = "%Y-%m-%d";
+	name = "IssueDate";
+}
+
+VolumeNumber: WOTextField {
+	value = issue.volumeNumber;
+	name = "VolumeNumber";
+}
+
+IssueNumber: WOTextField {
+	value = issue.issueNumber;
+	name = "IssueNumber";
+}
+
+ShowAddButton: WOConditional {
+	condition = showAddButton;
+}
+
+AddButton: WOSubmitButton {
+	action = addIssue;
+	value = "Add";
+	name = "Add";
+}
+
+ShowUpdateButton: WOConditional {
+	condition = showUpdateButton;
+}
+
+UpdateButton: WOSubmitButton {
+	action = updateIssue;
+	value = "Update";
+	name = "Update";
+}
+
+FirstItem: WOString {
+	value = displayGroup.indexOfFirstDisplayedObject;
+}
+
+LastItem: WOString {
+	value = displayGroup.indexOfLastDisplayedObject;
+}
+
+TotalItemsFound: WOString {
+	value = displayGroup.allObjects.count;
+}
+
+MultiBatchCondition: WOConditional {
+	condition = displayGroup.hasMultipleBatches;
+}
+
+PreviousBatch: WOHyperlink {
+	action = displayGroup.displayPreviousBatch;
+}
+
+NextBatch: WOHyperlink {
+	action = displayGroup.displayNextBatch;
+}
+
+Repetition1: WORepetition {
+	item = issueItem;
+	list = displayGroup.displayedObjects;
+}
+
+IssueDate: WOString {
+	value = issueItem.date;
+	dateformat = "%B %d, %Y";
+}
+
+EditLink: WOHyperlink {
+	action = editIssue;
+}
+
+DeleteLink: WOHyperlink {
+	action = deleteIssue;
+}

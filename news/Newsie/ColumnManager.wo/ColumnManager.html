@@ -1,0 +1,49 @@
+<WEBOBJECT NAME=EditToolbar>
+
+	<webobject name=Form1>
+		<div class=backEndForm>
+			<table border=0 cellpadding=2 cellspacing=0>
+				<tr>
+					<th>Column Name</th>
+					<td><webobject name=ColumnName></webobject></td>
+				</tr>
+				<tr>
+					<th>Active</th>
+					<td><webobject name=ActiveColumn></webobject></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+					<WEBOBJECT NAME=ShowAddButton><webobject name=AddButton></webobject></WEBOBJECT>
+					<WEBOBJECT NAME=ShowUpdateButton><webobject name=UpdateButton></webobject></WEBOBJECT>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class=backEndList>
+			<p>Displaying column(s)
+				<webobject name=FirstItem></webobject>
+				to
+				<webobject name=LastItem></webobject>
+				[of
+				<webobject name=TotalItemsFound></webobject>].<webobject name=MultiBatchCondition>
+					[<webobject name=PreviousBatch>Previous</webobject>
+					|
+					<webobject name=NextBatch>Next</webobject>]</webobject><br>
+			</p>
+			<table border=0 cellpadding=3 cellspacing=0>
+				<tr>
+					<th>Column Name</th>
+					<th></th>
+					<th></th>
+				</tr>
+				<webobject name=Repetition2>
+					<tr class=backEndRow>
+						<td class=backEndCell><webobject name=ItemName></webobject></td>
+						<td><webobject name=EditLink>edit</webobject></td>
+						<td><webobject name=DeleteLink>delete</webobject></td>
+					</tr>
+				</webobject>
+			</table>
+		</div>
+	</webobject></webobject>

@@ -1,0 +1,173 @@
+EditToolbar: EditToolbar {}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+FormIncompleteCondition: WOConditional {
+	condition = showAddWarning;
+}
+
+CantGetPhotosCondition: WOConditional {
+	condition = showPhotoWarning;
+}
+
+IssueListPopUp: WOPopUpButton {
+	list = issueList;
+	name = "issue";
+	noSelectionString = "[choose issue]";
+	item = issueItem;
+	displayString = issueItem.IsoDate;
+	selection = sectionFront.issue;
+}
+
+SectionCondition: WOConditional {
+	condition = showSection;
+}
+
+SectionListPopUp: WOPopUpButton {
+	list = sectionList;
+	name = "section";
+	noSelectionString = "[choose section]";
+	item = sectionItem;
+	displayString = sectionItem.sectionName;
+	selection = sectionItem;
+}
+
+GetPhotosButton: WOSubmitButton {
+	action = GetCurrentSectionPhotos;
+	value = "Get Photos";
+	name = "GetPhotos";
+}
+
+PhotoListCondition: WOConditional {
+	condition = storyAssetList.count;
+}
+
+PhotoListPopUp: WOPopUpButton {
+	list = storyAssetList;
+	name = "storyAsset";
+	noSelectionString = "[choose photo]";
+	item = storyAssetItem;
+	displayString = storyAssetItem.asset.captionPrefix;
+	selection = storyAssetItem;
+}
+
+FrontStyleCondition: WOConditional {
+	condition = showFrontStyle;
+}
+
+StylePopUp: WOPopUpButton {
+	list = frontNameList;
+	noSelectionString = "[choose style]";
+	selection = frontName;
+}
+
+SectionFrontHtmlCondition: WOConditional {
+	condition = sectionFront.content.length;
+}
+
+SectionFrontContent: WOText {
+	value = sectionFront.content;
+	cols = 80;
+	name = "sectionFront";
+	rows = 15;
+}
+
+ShowAddButton: WOConditional {
+	condition = showAddButton;
+}
+
+AddButton: WOSubmitButton {
+	action = addSectionFront;
+	value = "Add";
+	name = "Add";
+}
+
+ShowUpdateButton: WOConditional {
+	condition = showUpdateButton;
+}
+
+UpdateButton: WOSubmitButton {
+	action = updateSectionFront;
+	value = "Update";
+	name = "Update";
+}
+
+FirstItem: WOString {
+	value = displayGroup.indexOfFirstDisplayedObject;
+}
+
+LastItem: WOString {
+	value = displayGroup.indexOfLastDisplayedObject;
+}
+
+TotalItemsFound: WOString {
+	value = displayGroup.allObjects.count;
+}
+
+MultiBatchCondition: WOConditional {
+	condition = displayGroup.hasMultipleBatches;
+}
+
+PreviousBatch: WOHyperlink {
+	action = displayGroup.displayPreviousBatch;
+}
+
+NextBatch: WOHyperlink {
+	action = displayGroup.displayNextBatch;
+}
+
+IssuePopUpBottom: WOPopUpButton {
+	list = issueList;
+	name = "issueForDG";
+	noSelectionString = "[choose issue]";
+	item = selectedIssueItem;
+	displayString = selectedIssueItem.IsoDate;
+	selection = selectedIssueItem;
+}
+
+SectionPopUpBottom: WOPopUpButton {
+	list = sectionList;
+	name = "sectionForDG";
+	noSelectionString = "[choose section]";
+	item = selectedSectionItem;
+	displayString = selectedSectionItem.sectionName;
+	selection = selectedSectionItem;
+}
+
+GetSectionFrontsButton: WOSubmitButton {
+	action = GetIssueStories;
+	value = "Get Section Fronts";
+}
+
+Repetition2: WORepetition {
+	item = sectionFrontItem;
+	list = displayGroup.displayedObjects;
+}
+
+ItemDate: WOString {
+	value = sectionFrontItem.issue.date;
+	dateformat = "%B %d, %Y";
+}
+
+ItemSectionName: WOString {
+	value = sectionFrontItem.section.sectionName;
+}
+
+PreviewLink: WOHyperlink {
+	href = sectionFrontItem.linkPreview;
+	target = "_blank";
+}
+
+EditLink: WOHyperlink {
+	action = editSectionFront;
+}
+
+DeleteLink: WOHyperlink {
+	action = deleteSectionFront;
+}
+
+SectionListCondition: WOConditional {
+	condition = sectionList.count;
+}

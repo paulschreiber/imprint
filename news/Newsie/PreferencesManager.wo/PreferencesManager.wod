@@ -1,0 +1,20 @@
+EditToolbar: EditToolbar {
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+BatchSize: WOTextField {
+	value = batchSize;
+	name = "BatchSize";
+	size = 10;
+}
+
+SaveButton: WOSubmitButton {
+	action = saveChanges;
+	value = "Save Preferences";
+	name = "SavePreferences";
+}
+
+

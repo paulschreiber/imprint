@@ -1,0 +1,86 @@
+ReaderTopBar: ReaderTopBar {}
+
+FormSubmitted: WOConditional {
+	condition = allDone;
+}
+
+FormNotSubmitted: WOConditional {
+	condition = allDone;
+	negate = true;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+	method = "POST";
+	directActionName = "advertiseFeedback";
+	actionClass = "DirectAction";
+}
+
+TopicPopUp: WOPopUpButton {
+	name = "TopicPopUp";
+	selectedValue = selectedTopic;
+	list = adInfoList;
+	noSelectionString = "[choose topic]";
+}
+
+ChooseTopicButton: WOSubmitButton {
+	action = ShowTopicOptions;
+	name = "chooseTopic";
+	value = "Choose Topic";
+}
+
+UserInfoCondition: WOConditional {
+	condition = showUserInfo;
+}
+
+Name: WOTextField {
+	name = "name";
+	size = 40;
+	value = name;
+}
+
+Email: WOTextField {
+	name = "email";
+	value = email;
+	size = 40;
+}
+
+PhoneNumber: WOTextField {
+	name = "phoneNumber";
+	value = phoneNumber;
+	size = 20;
+}
+
+FaxNumber: WOTextField {
+	value = faxNumber;
+	size = 20;
+	name = "faxNumber";
+}
+
+StudentNumberCondition: WOConditional {
+	condition = showStudentNumber;
+}
+
+StudentNumber: WOTextField {
+	name = "studentNumber";
+	value = studentNumber;
+	size = 10;
+}
+
+
+TextFieldCondition: WOConditional {
+	condition = showTextField;
+}
+
+ClassifiedText: WOText {
+	cols = 60;
+	name = "classifiedText";
+	rows = 10;
+	value = classifiedText;
+}
+
+SubmitFeedback: WOSubmitButton {
+	value = "Submit Advertising Request";
+	action = SubmitForm;
+	name = "submitForm";
+}

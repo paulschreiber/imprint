@@ -1,0 +1,199 @@
+photo1: WOImage {
+	alt = photo1.caption;
+	src = photo1.location;
+	class = "campusQuestionPhoto";
+	width = photo1.width;
+	height = photo1.height;
+}
+
+photo2: WOImage {
+	alt = photo2.caption;
+	src = photo2.location;
+	class = "campusQuestionPhoto";
+	width = photo2.width;
+	height = photo2.height;
+}
+
+quote1: WOString {
+	value = quote1;
+}
+
+name1: WOString {
+	value = name1;
+}
+
+program1: WOString {
+	value = program1;
+}
+
+quote2: WOString {
+	value = quote2;
+}
+
+name2: WOString {
+	value = name2;
+}
+
+program2: WOString {
+	value = program2;
+}
+
+photo3: WOImage {
+	alt = photo3.caption;
+	src = photo3.location;
+	class = "campusQuestionPhoto";
+	width = photo3.width;
+	height = photo3.height;
+}
+
+photo4: WOImage {
+	alt = photo4.caption;
+	src = photo4.location;
+	class = "campusQuestionPhoto";
+	width = photo4.width;
+	height = photo4.height;
+}
+
+quote3: WOString {
+	value = quote3;
+}
+
+name3: WOString {
+	value = name3;
+}
+
+program3: WOString {
+	value = program3;
+}
+
+quote4: WOString {
+	value = quote4;
+}
+
+name4: WOString {
+	value = name4;
+}
+
+program4: WOString {
+	value = program4;
+}
+
+photo5: WOImage {
+	alt = photo5.caption;
+	src = photo5.location;
+	class = "campusQuestionPhoto";
+	width = photo5.width;
+	height = photo5.height;
+}
+
+photo6: WOImage {
+	alt = photo6.caption;
+	src = photo6.location;
+	class = "campusQuestionPhoto";
+	width = photo6.width;
+	height = photo6.height;
+}
+
+quote5: WOString {
+	value = quote5;
+}
+
+name5: WOString {
+	value = name5;
+}
+
+program5: WOString {
+	value = program5;
+}
+
+quote6: WOString {
+	value = quote6;
+}
+
+name6: WOString {
+	value = name6;
+}
+
+program6: WOString {
+	value = program6;
+}
+
+photo7: WOImage {
+	alt = photo7.caption;
+	src = photo7.location;
+	class = "campusQuestionPhoto";
+	width = photo7.width;
+	height = photo7.height;
+}
+
+photo8: WOImage {
+	alt = photo8.caption;
+	src = photo8.location;
+	class = "campusQuestionPhoto";
+	width = photo8.width;
+	height = photo8.height;
+}
+
+quote7: WOString {
+	value = quote7;
+}
+
+name7: WOString {
+	value = name7;
+}
+
+program7: WOString {
+	value = program7;
+}
+
+quote8: WOString {
+	value = quote8;
+}
+
+name8: WOString {
+	value = name8;
+}
+
+program8: WOString {
+	value = program8;
+}
+
+photo9: WOImage {
+	alt = photo9.caption;
+	src = photo9.location;
+	class = "campusQuestionPhoto";
+	width = photo9.width;
+	height = photo9.height;
+}
+
+photo10: WOImage {
+	alt = photo10.caption;
+	src = photo10.location;
+	class = "campusQuestionPhoto";
+	width = photo10.width;
+	height = photo10.height;
+}
+
+quote9: WOString {
+	value = quote9;
+}
+
+name9: WOString {
+	value = name9;
+}
+
+program9: WOString {
+	value = program9;
+}
+
+quote10: WOString {
+	value = quote10;
+}
+
+name10: WOString {
+	value = name10;
+}
+
+program10: WOString {
+	value = program10;
+}

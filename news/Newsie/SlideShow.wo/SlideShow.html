@@ -1,0 +1,37 @@
+<script type="text/javascript" language="Javascript">
+<!--
+var photoList = [
+<webobject name=PhotoRepetition>'<webobject name=PhotoLocation></webobject>',</webobject>
+				];
+var widthList = [
+<webobject name=WidthRepetition>'<webobject name=PhotoWidth></webobject>',</webobject>
+				];
+var heightList = [
+<webobject name=HeightRepetition>'<webobject name=PhotoHeight></webobject>',</webobject>
+				];
+
+var captionList = [
+<webobject name=CaptionRepetition>'<webobject name=PhotoCaptionCondition><webobject name=PhotoCaption></webobject></webobject>',</webobject>
+				];
+
+var creditList = [
+<webobject name=CreditRepetition>'<webobject name=PhotoCredit></webobject>',</webobject>
+				];
+
+//-->
+</script>
+
+<div>
+<br><br>
+<a class="frontPageLink" href="javascript:prevPhoto();">&lt; previous photo</a> | 
+<a class="frontPageLink" href="javascript:nextPhoto();">next photo &gt;</a>
+<br><br>
+</div>
+
+<p class="photoCredit"><webobject name=Image1></webobject></p>
+
+<br><div id="slideCredit" class="photoCredit"><webobject name=Credit></webobject></div>
+<webobject name=HiddenCaptionCondition><br><div id="slideCaption" class="photoCaption"><webobject name=Caption></webobject></div>
+
+</webobject><p class="lede"></p>
+<!-- lede paragraph intentionally blank -->

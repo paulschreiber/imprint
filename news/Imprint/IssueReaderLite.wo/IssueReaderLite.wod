@@ -1,0 +1,31 @@
+ReaderLiteBar: ReaderLiteBar {}
+
+NoSectionCondition: WOConditional {
+	condition = noIssueFound;
+}
+
+SectionCondition: WOConditional {
+	condition = noIssueFound;
+	negate = true;
+}
+
+Content: WOString {
+	value = issueFront.content;
+	escapeHTML = false;
+}
+
+LiteLink: WOHyperlink {
+	href = link;
+}
+
+Photo1: WOString {
+	value = photo1;
+}
+
+LetterLink: WOString {
+	value = storyItem.linkLite;
+}
+
+StoryLink: WOString {
+	value = storyItem.linkLite;
+}

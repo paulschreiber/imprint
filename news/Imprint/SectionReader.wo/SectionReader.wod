@@ -1,0 +1,23 @@
+ReaderTopBar: ReaderTopBar {}
+
+SectionFoundCondition: WOConditional {
+	condition = noSectionFound;
+	negate = true;
+}
+
+SectionName: WOString {
+	value = sectionFront.section.sectionName;
+}
+
+SectionContent: WOString {
+	value = sectionFront.content;
+	escapeHTML = false;
+}
+
+LiteLink: WOHyperlink {
+	href = sectionFront.linkLite;
+}
+
+NoSectionFoundCondition: WOConditional {
+	condition = noSectionFound;
+}

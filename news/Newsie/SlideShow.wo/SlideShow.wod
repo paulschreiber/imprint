@@ -1,0 +1,76 @@
+Image1: WOImage {
+	alt = firstCaption;
+	class = "photo";
+	height = firstHeight;
+	name = "slideImage";
+	src = firstSrc;
+	width = firstWidth;
+}
+
+Credit: WOString {
+	value = firstCredit;
+	escapeHTML = false;
+}
+
+HiddenCaptionCondition: WOConditional {
+	condition = firstCaptionHidden;
+}
+
+Caption: WOString {
+	value = firstCaption;
+}
+
+PhotoCaption: WOString {
+	value = photoItem.caption;
+}
+
+PhotoHeight: WOString {
+	value = photoItem.height;
+}
+
+HeightRepetition: WORepetition {
+	item = photoItem;
+	list = photoList;
+}
+
+CreditRepetition: WORepetition {
+	item = photoItem;
+	list = photoList;
+}
+
+PhotoLocation: WOString {
+	value = photoItem.location;
+}
+
+PhotoCredit: WOString {
+	value = photoItem.AuthorNamesJavaScript;
+	escapeHTML = false;
+}
+
+WidthRepetition: WORepetition {
+	item = photoItem;
+	list = photoList;
+}
+
+JavaScript1: WOJavaScript {
+	hideInComment = true;
+}
+
+PhotoWidth: WOString {
+	value = photoItem.width;
+}
+
+PhotoCaptionCondition: WOConditional {
+	condition = photoItem.hideCaption;
+	negate = true;
+}
+
+PhotoRepetition: WORepetition {
+	item = photoItem;
+	list = photoList;
+}
+
+CaptionRepetition: WORepetition {
+	item = photoItem;
+	list = photoList;
+}

@@ -1,0 +1,86 @@
+EditToolbar: EditToolbar {}
+
+ShowAddButton: WOConditional {
+	condition = showAddButton;
+}
+
+ShowUpdateButton: WOConditional {
+	condition = showUpdateButton;
+}
+
+MultiBatchCondition: WOConditional {
+	condition = displayGroup.hasMultipleBatches;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+IssuePopUp: WOPopUpButton {
+	list = issueList;
+	name = "issue";
+	noSelectionString = "[choose issue]";
+	item = issueItem;
+	displayString = issueItem.IsoDate;
+	selection = issueMasthead.issue;
+}
+
+MastheadContent: WOText {
+	value = issueMasthead.content;
+	cols = 70;
+	name = "masthead";
+	rows = 10;
+}
+
+AddButton: WOSubmitButton {
+	action = addIssueMasthead;
+	value = "Add";
+}
+
+UpdateButton: WOSubmitButton {
+	action = updateIssueMasthead;
+	value = "Update";
+}
+
+FirstItem: WOString {
+	value = displayGroup.indexOfFirstDisplayedObject;
+}
+
+LastItem: WOString {
+	value = displayGroup.indexOfLastDisplayedObject;
+}
+
+TotalItemsFound: WOString {
+	value = displayGroup.allObjects.count;
+}
+
+PreviousBatch: WOHyperlink {
+	action = displayGroup.displayPreviousBatch;
+}
+
+NextBatch: WOHyperlink {
+	action = displayGroup.displayNextBatch;
+}
+
+Repetition2: WORepetition {
+	item = issueMastheadItem;
+	list = displayGroup.displayedObjects;
+}
+
+ItemDate: WOString {
+	value = issueMastheadItem.issue.date;
+	dateformat = "%B %d, %Y";
+}
+
+PreviewLink: WOHyperlink {
+	href = issueMastheadItem.linkPreview;
+	target = "_blank";
+}
+
+EditLink: WOHyperlink {
+	action = editIssueMasthead;
+}
+
+DeleteLink: WOHyperlink {
+	action = deleteIssueMasthead;
+}

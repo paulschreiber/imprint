@@ -1,0 +1,82 @@
+AdToolbar: AdToolbar {}
+
+
+MultiBatchCondition: WOConditional {
+	condition = displayGroup.hasMultipleBatches;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+Company: WOTextField {
+	value = advertiser.company;
+	name = "Company";
+}
+
+FirstName: WOTextField {
+	value = advertiser.firstName;
+	name = "FirstName";
+}
+
+LastName: WOTextField {
+	value = advertiser.lastName;
+	name = "LastName";
+}
+
+Email: WOTextField {
+	value = advertiser.email;
+	name = "Email";
+}
+
+Phone: WOTextField {
+	value = advertiser.phone;
+	name = "Phone";
+}
+
+AddButton: WOSubmitButton {
+	action = addAdvertiser;
+	value = "Add";
+}
+
+UpdateButton: WOSubmitButton {
+	action = updateAdvertiser;
+	value = "Update";
+}
+
+FirstItem: WOString {
+	value = displayGroup.indexOfFirstDisplayedObject;
+}
+
+LastItem: WOString {
+	value = displayGroup.indexOfLastDisplayedObject;
+}
+
+TotalItemsFound: WOString {
+	value = displayGroup.allObjects.count;
+}
+
+PreviousBatch: WOHyperlink {
+	action = displayGroup.displayPreviousBatch;
+}
+
+NextBatch: WOHyperlink {
+	action = displayGroup.displayNextBatch;
+}
+
+Repetition2: WORepetition {
+	item = advertiserItem;
+	list = displayGroup.displayedObjects;
+}
+
+AdvertisterName: WOString {
+	value = advertiserItem.company;
+}
+
+EditLink: WOHyperlink {
+	action = editAdvertiser;
+}
+
+DeleteLink: WOHyperlink {
+	action = deleteAdvertiser;
+}

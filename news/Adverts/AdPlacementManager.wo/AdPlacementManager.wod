@@ -1,0 +1,94 @@
+AdToolbar: AdToolbar {}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+Frequency: WOTextField {
+	value = adPlacement.frequency;
+	name = "Frequency";
+}
+
+
+MultiBatchCondition: WOConditional {
+	condition = displayGroup.hasMultipleBatches;
+}
+
+SectionPopUp: WOPopUpButton {
+	list = sectionList;
+	name = "section";
+	noSelectionString = "[choose section]";
+	item = sectionItem;
+	displayString = sectionItem.sectionName;
+	selection = adPlacement.section;
+}
+
+CreativePopUp: WOPopUpButton {
+	list = adCreativeList;
+	name = "adCreative";
+	noSelectionString = "[choose ad creative]";
+	item = adCreativeItem;
+	displayString = adCreativeItem.nameAndCompany;
+	selection = adPlacement.adCreative;
+}
+
+AddButton: WOSubmitButton {
+	action = addAdPlacement;
+	value = "Add";
+	name = "Add";
+}
+
+UpdateButton: WOSubmitButton {
+	action = updateAdPlacement;
+	value = "Update";
+	name = "Update";
+}
+
+FirstItem: WOString {
+	value = displayGroup.indexOfFirstDisplayedObject;
+}
+
+LastItem: WOString {
+	value = displayGroup.indexOfLastDisplayedObject;
+}
+
+TotalItemsFound: WOString {
+	value = displayGroup.allObjects.count;
+}
+
+PreviousBatch: WOHyperlink {
+	action = displayGroup.displayPreviousBatch;
+}
+
+NextBatch: WOHyperlink {
+	action = displayGroup.displayNextBatch;
+}
+
+Repetition2: WORepetition {
+	item = adPlacementItem;
+	list = displayGroup.displayedObjects;
+}
+
+ItemCompanyName: WOString {
+	value = adPlacementItem.adCreative.advertiser.company;
+}
+
+ItemCreativeName: WOString {
+	value = adPlacementItem.adCreative.name;
+}
+
+ItemFrequency: WOString {
+	value = adPlacementItem.frequency;
+}
+
+ItemSection: WOString {
+	value = adPlacementItem.section.sectionName;
+}
+
+EditLink: WOHyperlink {
+	action = editAdPlacement;
+}
+
+DeleteLink: WOHyperlink {
+	action = deleteAdPlacement;
+}

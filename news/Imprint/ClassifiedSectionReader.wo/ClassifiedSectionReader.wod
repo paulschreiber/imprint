@@ -1,0 +1,25 @@
+ReaderTopBar: ReaderTopBar {}
+
+AdSectionName: WOString {
+	value = adSection;
+}
+
+AdCondition: WOConditional {
+	condition = adList.count;
+}
+
+ClassifiedRepetition: WORepetition {
+	item = adClassified;
+	list = adList;
+}
+
+AdString: WOString {
+	value = adClassified.ad;
+}
+
+NoAdCondition: WOConditional {
+	condition = adList.count;
+	negate = true;
+}
+
+ReaderBottomBar: ReaderBottomBar {}

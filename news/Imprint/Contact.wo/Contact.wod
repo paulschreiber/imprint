@@ -1,0 +1,200 @@
+ReaderTopBar: ReaderTopBar {}
+
+FormSubmitted: WOConditional {
+	condition = allDone;
+}
+
+FormNotSubmitted: WOConditional {
+	condition = allDone;
+	negate = true;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+	directActionName = "feedback";
+	method = "POST";
+	actionClass = "DirectAction";
+	enctype = "multipart/form-data";
+}
+
+TopicPopUp: WOPopUpButton {
+	name = "TopicPopUp";
+	selectedValue = selectedTopic;
+	list = feedbackList;
+	noSelectionString = "[choose topic]";
+}
+
+ChooseTopicButton: WOSubmitButton {
+	action = ShowTopicOptions;
+	name = "chooseTopic";
+	value = "Choose Topic";
+}
+
+VolunteerCondition: WOConditional {
+	condition = showInterestCheckboxes;
+}
+
+ArtsCheckbox: WOCheckBox {
+	name = "interests";
+	value = "arts";
+	selection = artsChecked;
+}
+
+FeaturesCheckbox: WOCheckBox {
+	name = "interests";
+	value = "features";
+	selection = featuresChecked;
+}
+
+ForumCheckbox: WOCheckBox {
+	name = "interests";
+	value = "forum";
+	selection = forumChecked;
+}
+
+NewsCheckbox: WOCheckBox {
+	name = "interests";
+	value = "forum";
+	selection = newsChecked;
+}
+
+SysAdminCheckbox: WOCheckBox {
+	name = "interests";
+	value = "sysadmin";
+	selection = sysAdminChecked;
+}
+
+ScienceCheckbox: WOCheckBox {
+	name = "interests";
+	value = "science";
+	selection = scienceChecked;
+}
+
+SportsCheckbox: WOCheckBox {
+	name = "interests";
+	value = "sports";
+	selection = sportsChecked;
+}
+
+WebCheckbox: WOCheckBox {
+	name = "interests";
+	value = "web";
+	selection = webChecked;
+}
+
+GraphicsCheckbox: WOCheckBox {
+	name = "interests";
+	value = "graphics";
+	selection = graphicsChecked;
+}
+
+PhotoCheckbox: WOCheckBox {
+	name = "interests";
+	value = "photo";
+	selection = photoChecked;
+}
+
+SomethingMissingCondition: WOConditional {
+	condition = atLeastOneWarning;
+}
+
+
+UserInfoMissingCondition: WOConditional {
+	condition = showInfoWarning;
+}
+
+LetterInfoMissingCondition: WOConditional {
+	condition = showLetterWarning;
+}
+
+CorrectionInfoMissingCondition: WOConditional {
+	condition = showCorrectionWarning;
+}
+
+ArticleInfoMissingCondition: WOConditional {
+	condition = showCorrectionWarning;
+}
+
+
+UserInfoCondition: WOConditional {
+	condition = showUserInfo;
+}
+
+UserName: WOTextField {
+	name = "userName";
+	size = 40;
+	value = userName;
+}
+
+UserEmail: WOTextField {
+	name = "userEmail";
+	value = userEmail;
+	size = 40;
+}
+
+UserPhone: WOTextField {
+	name = "userPhone";
+	value = userPhone;
+}
+
+CorrectionCondition: WOConditional {
+	condition = showYearProgram;
+}
+
+Program: WOTextField {
+	value = program;
+	size = 40;
+	name = "program";
+}
+
+Year: WOTextField {
+	value = year;
+	name = "year";
+}
+
+LetterCondition: WOConditional {
+	condition = showCorrectionInfo;
+}
+
+ArticleTitle: WOTextField {
+	name = "articleTitle";
+	value = articleTitle;
+	size = 40;
+}
+
+ArticleDate: WOTextField {
+	name = "articleDate";
+	value = articleDate;
+}
+
+
+AttachFileCondition: WOConditional {
+	condition = showFileUpload;
+}
+
+FileUpload: WOFileUpload {
+	data = attachmentData;
+	filePath = attachmentLocation;
+	name = "thefile";
+}
+
+TextFieldCondition: WOConditional {
+	condition = showTextField;
+}
+
+UserFeedback: WOText {
+	cols = 60;
+	name = "userFeedback";
+	rows = 10;
+	value = userFeedback;
+}
+
+SubmitFormCondition: WOConditional {
+	condition = showSubmitButton;
+}
+
+SubmitFeedback: WOSubmitButton {
+	value = "Submit Feedback";
+	action = SubmitForm;
+	name = "submitForm";
+}

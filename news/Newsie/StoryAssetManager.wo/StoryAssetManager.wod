@@ -1,0 +1,139 @@
+EditToolbar: EditToolbar {}
+
+ShowAddButton: WOConditional {
+	condition = showAddButton;
+}
+
+ShowUpdateButton: WOConditional {
+	condition = showUpdateButton;
+}
+
+MultiBatchCondition: WOConditional {
+	condition = displayGroup.hasMultipleBatches;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+IssuePopUp: WOPopUpButton {
+	list = issueList;
+	name = "issue";
+	noSelectionString = "[choose issue]";
+	item = issueItem;
+	displayString = issueItem.IsoDate;
+	selection = issueItem;
+}
+
+GetStoriesButton: WOSubmitButton {
+	action = GetSelectedIssueStories;
+	value = "Get Stories and Photos";
+}
+
+AssetListCondition: WOConditional {
+	condition = assetList.count;
+}
+
+AssetPopUp: WOPopUpButton {
+	list = assetList;
+	name = "asset";
+	noSelectionString = "[choose asset]";
+	item = assetItem;
+	displayString = assetItem.captionPrefix;
+	selection = storyAsset.asset;
+}
+
+
+StoryPopUp: WOPopUpButton {
+	list = storyList;
+	name = "story";
+	noSelectionString = "[choose story]";
+	item = storyItem;
+	displayString = storyItem.headline;
+	selection = storyAsset.story;
+}
+
+PhotoOrder: WOTextField {
+	name = "photoOrder";
+	value = storyAsset.orderInStory;
+}
+
+AddButton: WOSubmitButton {
+	action = addStoryAsset;
+	value = "Add";
+	name = "AddButton";
+}
+
+UpdateButton: WOSubmitButton {
+	action = updateStoryAsset;
+	value = "Update";
+	name = "Update";
+}
+
+FirstItem: WOString {
+	value = displayGroup.indexOfFirstDisplayedObject;
+}
+
+LastItem: WOString {
+	value = displayGroup.indexOfLastDisplayedObject;
+}
+
+TotalItemsFound: WOString {
+	value = displayGroup.allObjects.count;
+}
+
+PreviousBatch: WOHyperlink {
+	action = displayGroup.displayPreviousBatch;
+}
+
+NextBatch: WOHyperlink {
+	action = displayGroup.displayNextBatch;
+}
+
+IssuePopUpButton: WOPopUpButton {
+	list = issueList;
+	name = "issueForDG";
+	noSelectionString = "[choose issue]";
+	item = selectedIssueItem;
+	displayString = selectedIssueItem.IsoDate;
+	selection = selectedIssueItem;
+}
+
+SectionPopUpButton: WOPopUpButton {
+	list = sectionList;
+	name = "sectionForDG";
+	noSelectionString = "[choose section]";
+	item = selectedSectionItem;
+	displayString = selectedSectionItem.sectionName;
+	selection = selectedSectionItem;
+}
+
+GetStoriesButton2: WOSubmitButton {
+	action = GetIssueStories;
+	value = "Get Stories";
+}
+
+Repetition2: WORepetition {
+	item = storyAssetItem;
+	list = displayGroup.displayedObjects;
+}
+
+ItemHeadline: WOString {
+	value = storyAssetItem.story.headline;
+}
+
+ItemCaption: WOString {
+	value = storyAssetItem.asset.captionPrefix;
+}
+
+ItemDate: WOString {
+	value = storyAssetItem.story.issue.IsoDate;
+}
+
+EditLink: WOHyperlink {
+	action = editStoryAsset;
+}
+
+DeleteLink: WOHyperlink {
+	action = deleteStoryAsset;
+}

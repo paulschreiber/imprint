@@ -1,0 +1,76 @@
+<WEBOBJECT NAME=EditToolbar>
+
+	<WEBOBJECT NAME=Form1>
+	<div class="backEndForm">
+
+	<webobject name=FormIncompleteCondition>
+	<p class="warning">Please select the author, issue and caption.</p>
+	</webobject>
+
+	<webobject name=UploadFailedCondition>
+	<p class="warning">Your upload failed. Please check that the AssetPath is set correctly in the Properties file,   the permission is set correctly on the directory and there is sufficient disk space.</p>
+	</webobject>
+
+
+	<table border="0" cellpadding="0" cellspacing="2">
+	<tr><th>Author</th><td><WEBOBJECT NAME=AuthorPopUp></WEBOBJECT><BR><WEBOBJECT NAME=AuthorPopUp2></WEBOBJECT></td></tr>
+	<tr><th>Store with this issue</th><td><WEBOBJECT NAME=IssuePopUp></WEBOBJECT></td></tr>
+	<tr><th>Caption/Description</th><td><WEBOBJECT NAME=CaptionText></WEBOBJECT></td></tr>
+	<TR><TH></TH><TD><WEBOBJECT NAME=HideCaption></WEBOBJECT>hide caption in stories</TD></TR><tr><th>File</th><td><WEBOBJECT NAME=FileUpload></WEBOBJECT></td></tr>
+
+	<webobject NAME=FilePreviewCondition>
+		<tr><th>Location</th><td><webobject NAME=assetLocation></webobject></td></tr>
+		<tr>
+			<th>Preview</th>
+			<td>
+			<webobject name=AssetIsImageCondition><WEBOBJECT NAME=Image></WEBOBJECT></webobject>
+			<webobject name=AssetIsMovieCondition><webobject name=AssetEmbed></webobject></webobject>
+			<webobject name=AssetIsDownloadCondition>Download: <webobject name=AssetDownloadLink></webobject></webobject>
+			</td>
+		</tr>
+	</webobject>
+
+	<tr>
+		<td></td>
+		<td>
+		<WEBOBJECT NAME=ShowAddButton><webobject name=AddButton></webobject></WEBOBJECT>
+		<WEBOBJECT NAME=ShowUpdateButton><webobject name=UpdateButton></webobject></WEBOBJECT>
+		</td>
+	</tr>
+	
+
+	</table>
+
+	</div>
+
+	<div class="backEndList">
+	
+	<P>Displaying asset(s) <WEBOBJECT NAME=FirstItem></WEBOBJECT> to <WEBOBJECT NAME=LastItem></WEBOBJECT> [of <WEBOBJECT NAME=TotalItemsFound></WEBOBJECT>].  <WEBOBJECT NAME=MultiBatchCondition> [<WEBOBJECT NAME=PreviousBatch>Previous</WEBOBJECT> | <WEBOBJECT NAME=NextBatch>Next</WEBOBJECT>]</WEBOBJECT><BR></P>
+
+	<P>Show stories from issue <WEBOBJECT NAME=IssuePopUpBottom></WEBOBJECT> <WEBOBJECT NAME=SubmitButton3></WEBOBJECT></P>
+	
+	
+	<TABLE BORDER=0 CELLPADDING=3 CELLSPACING=0>
+	<TR>
+	<TH>Asset</TH>
+	<th>Date</th>
+	<TH></TH>
+	<TH></TH>
+	</TR>
+	
+	<WEBOBJECT NAME=Repetition2>
+	    <TR class="backEndRow">
+		<TD><WEBOBJECT NAME=ItemCaption></WEBOBJECT></TD>
+		<td class="backEndCell"><webobject NAME=DateItem></webobject></td>
+		<TD><WEBOBJECT NAME=EditLink>edit</WEBOBJECT></TD>
+		<TD><WEBOBJECT NAME=DeleteLink>delete</WEBOBJECT></TD>
+	    </TR>
+	</WEBOBJECT>
+	
+	</table>
+
+	</div>
+
+	</WEBOBJECT>
+	
+</webobject>

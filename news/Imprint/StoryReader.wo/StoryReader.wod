@@ -1,0 +1,137 @@
+ReaderTopBar: ReaderTopBar {}
+
+StoryFoundCondition: WOConditional {
+	condition = noStoryFound;
+	negate = true;
+}
+
+SectionName: WOString {
+	value = story.section.sectionName;
+}
+
+ColumnConditional: WOConditional {
+	condition = story.column.columnName.length;
+}
+
+ColumnName: WOString {
+	value = story.column.columnName;
+}
+
+Headline: WOString {
+	value = story.headline;
+	"class" = "headline";
+	escapeHTML = false;
+}
+
+SubheadConditional: WOConditional {
+	condition = story.subhead.length;
+}
+
+Subhead: WOString {
+	value = story.subhead;
+	"class" = "subhead";
+	escapeHTML = false;
+}
+
+BylineCondition: WOConditional {
+	condition = story.AuthorNames.length;
+}
+
+AuthorName: WOString {
+	value = story.AuthorNames;
+	escapeHTML = false;
+}
+
+BylineCondition2: WOConditional {
+	condition = story.AuthorTitles.length;
+}
+
+Byline: WOString {
+	value = story.AuthorTitles;
+}
+
+StoryContents: WOString {
+	value = story.contents;
+	escapeHTML = false;
+}
+
+LiteLink: WOHyperlink {
+	href = story.linkLite;
+}
+
+NITFLink: WOHyperlink {
+	href = story.linkNitf;
+}
+
+AssetConditional: WOConditional {
+	condition = storyAssetList.count;
+}
+
+StoryAssetList: WORepetition {
+	item = storyAsset;
+	list = storyAssetList;
+}
+
+AssetImageCondition: WOConditional {
+	condition = storyAsset.asset.isImage;
+}
+
+StoryImage: WOImage {
+	alt = storyAsset.asset.caption;
+	class = "photo";
+	src = storyAsset.asset.location;
+	width = storyAsset.asset.width;
+	height = storyAsset.asset.height;
+}
+
+AssetEmbedCondition: WOConditional {
+	condition = storyAsset.asset.isEmbedded;
+}
+
+AssetEmbed: WOEmbeddedObject {
+	autostart = "false";
+	bgcolor = "#FFFec4";
+	class = "photo";
+	src = storyAsset.asset.location;
+}
+
+AssetDownloadCondition: WOConditional {
+	condition = storyAsset.asset.isDownloadable;
+}
+
+AssetDownloadLink: WOHyperlink {
+	href = storyAsset.asset.location;
+	string = storyAsset.asset.fileName;
+}
+
+AssetAuthor: WOString {
+	value = storyAsset.asset.AuthorNames;
+	escapeHTML = false;
+}
+
+CaptionCondition: WOConditional {
+	condition = storyAsset.asset.hideCaption;
+	negate = true;
+}
+
+AssetCaption: WOString {
+	value = storyAsset.asset.caption;
+	escapeHTML = false;
+}
+
+NoStoryFoundCondition: WOConditional {
+	condition = noStoryFound;
+}
+
+AssetPath: WOString {
+	value = storyAsset.asset.location;
+}
+
+
+StoryTypeConditional: WOConditional {
+	condition = story.storyType.storyType.length;
+}
+
+StoryType: WOString {
+	value = story.storyType.storyType;
+}

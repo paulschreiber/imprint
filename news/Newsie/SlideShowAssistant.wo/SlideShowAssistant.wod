@@ -1,0 +1,36 @@
+EditToolbar: EditToolbar {}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+PhotoPopUpCondition: WOConditional {
+	condition = assetList.count;
+}
+
+CheckboxMatrix: WOCheckboxMatrix {
+ 	list = assetList;
+	maxColumns = 2;
+	item = assetItem;
+	selections = checkedAssetList;
+}
+
+String1: WOString {
+	value = assetItem.caption;
+}
+
+ProcessButton: WOSubmitButton {
+
+	value = "Save Slide Show";
+	action = ProcessSlideShow;
+}
+
+NoPhotoCondition: WOConditional {
+	condition = assetList.count;
+	negate = true;
+}
+
+SubmitButton2: WOSubmitButton {
+	action = getPhotos;
+	value = "Get Photos";
+}

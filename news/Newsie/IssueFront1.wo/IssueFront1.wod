@@ -1,0 +1,111 @@
+Headline1: WOString {
+	value = headline1;
+}
+
+Lede1: WOString {
+	value = lede1;
+}
+
+Headline2: WOString {
+	value = headline2;
+}
+
+Lede2: WOString {
+	value = lede2;
+}
+
+Story3Condition: WOConditional {
+	condition = headline3.length;
+}
+
+Headline3: WOString {
+	value = headline3;
+}
+
+Lede3: WOString {
+	value = lede3;
+}
+
+Headline4: WOString {
+	value = headline4;
+}
+
+Lede4: WOString {
+	value = lede4;
+}
+
+Headline5: WOString {
+	value = headline5;
+}
+
+Lede5: WOString {
+	value = lede5;
+}
+
+Credit1: WOString {
+	value = credit1;
+	escapeHTML = false;
+}
+
+Caption1: WOString {
+	value = caption1;
+}
+
+Credit2: WOString {
+	value = credit2;
+	escapeHTML = false;
+}
+
+Caption2: WOString {
+	value = caption2;
+}
+
+Photo1: WOString {
+	value = photo1;
+}
+
+Photo2: WOString {
+	value = photo2;
+}
+
+Link1: WOString {
+	value = story1;
+}
+
+Link3: WOString {
+	value = story3;
+}
+
+Story5: WOString {
+	value = story5;
+}
+
+Story1: WOString {
+	value = story1;
+}
+
+Story2: WOString {
+	value = story2;
+}
+
+Story3: WOString {
+	value = story3;
+}
+
+Story4: WOString {
+	value = story4;
+}
+String2: WOString {
+}
+
+Link2: WOString {
+	value = story2;
+}
+
+Link4: WOString {
+	value = story4;
+}
+
+Link5: WOString {
+	value = story5;
+}

@@ -1,0 +1,84 @@
+ReaderLiteBar: ReaderLiteBar {}
+
+StoryFoundCondition: WOConditional {
+	condition = noStoryFound;
+	negate = true;
+}
+
+SectionName: WOString {
+	value = story.section.sectionName;
+}
+
+ColumnConditional: WOConditional {
+	condition = story.column.columnName.length;
+}
+
+ColumnName: WOString {
+	value = story.column.columnName;
+}
+
+Headline: WOString {
+	value = story.headline;
+	"class" = "headline";
+	escapeHTML = false;
+}
+
+SubheadConditional: WOConditional {
+	condition = story.subhead.length;
+}
+
+Subhead: WOString {
+	value = story.subhead;
+	"class" = "subhead";
+	escapeHTML = false;
+}
+
+AuthorCondition: WOConditional {
+	condition = story.AuthorNames.length;
+}
+
+AuthorName: WOString {
+	value = story.AuthorNames;
+	escapeHTML = false;
+}
+
+BylineCondition: WOConditional {
+	condition = story.AuthorTitles.length;
+}
+
+Byline: WOString {
+	value = story.AuthorTitles;
+}
+
+StoryContents: WOString {
+	value = story.contents;
+	escapeHTML = false;
+}
+
+FullLink: WOHyperlink {
+	href = story.link;
+}
+
+NITFLink: WOHyperlink {
+	href = story.linkNitf;
+}
+
+NoStoryFoundCondition: WOConditional {
+	condition = noStoryFound;
+}
+
+StoryTypeConditional: WOConditional {
+	condition = story.storyType.storyType.length;
+}
+
+StoryType: WOString {
+	value = story.storyType.storyType;
+}
+
+EmailPresent: WOConditional {
+	condition = story.hasOneAuthor;
+}
+
+AssetPath: WOString {
+	value = storyAsset.asset.location;
+}

@@ -1,0 +1,113 @@
+PageTitle: WOString {
+	value = session.pageTitle;
+}
+
+HomeLink: WOHyperlink {
+	actionClass = "DirectAction";
+	directActionName = "default";
+}
+
+AdBannerCondition: WOConditional {
+	condition = session.adBanner.location.length;
+}
+
+BannerAd: WOImage {
+	alt = session.adBanner.advertiser.company;
+	height = session.adBanner.height;
+	src = session.adBanner.location;
+	width = session.adBanner.width;
+	border = 0;
+}
+
+MiddleNavConditional: WOConditional {
+	condition = session.compactDate.length;
+}
+
+IssueLink: WOHyperlink {
+	?date = session.compactDate;
+	?wosid = "NO";
+	actionClass = "DirectAction";
+	class = "frontPageNavMiddleLink";
+	directActionName = "issue";
+}
+
+IssueDate: WOString {
+	value = session.issueDate;
+	dateformat = "%B %d, %Y";
+}
+
+NewsLink: WOHyperlink {
+	actionClass = "DirectAction";
+	class = "frontPageNavMiddleLink";
+	directActionName = "section";
+	?date = session.compactDate;
+	?section = "News";
+	?wosid = false;
+}
+
+ForumLink: WOHyperlink {
+	actionClass = "DirectAction";
+	class = "frontPageNavMiddleLink";
+	directActionName = "section";
+	?date = session.compactDate;
+	?section = "Forum";
+	?wosid = "NO";
+}
+
+FeaturesLink: WOHyperlink {
+	actionClass = "DirectAction";
+	class = "frontPageNavMiddleLink";
+	directActionName = "section";
+	?date = session.compactDate;
+	?section = "Features";
+	?wosid = "NO";
+}
+
+ScienceLink: WOHyperlink {
+	actionClass = "DirectAction";
+	class = "frontPageNavMiddleLink";
+	directActionName = "section";
+	?date = session.compactDate;
+	?section = "Science";
+	?wosid = "NO";
+}
+
+SportsLink: WOHyperlink {
+	actionClass = "DirectAction";
+	class = "frontPageNavMiddleLink";
+	directActionName = "section";
+	?date = session.compactDate;
+	?section = "Sports";
+	?wosid = "NO";
+}
+
+ArtsLink: WOHyperlink {
+	actionClass = "DirectAction";
+	class = "frontPageNavMiddleLink";
+	directActionName = "section";
+	?date = session.compactDate;
+	?section = "Arts";
+	?wosid = "NO";
+}
+
+ClassifiedsLink: WOHyperlink {
+	actionClass = "DirectAction";
+	class = "frontPageNavMiddleLink";
+	directActionName = "classifieds";
+	?wosid = "NO";
+	?date = session.compactDate;
+}
+
+MastheadLink: WOHyperlink {
+	actionClass = "DirectAction";
+	class = "frontPageNavMiddleLink";
+	directActionName = "masthead";
+	?date = session.compactDate;
+	?wosid = "NO";
+}
+
+ParentContent : WOComponentContent {};
+
+BannerLink: WOString {
+	value = session.adBanner.url;
+}

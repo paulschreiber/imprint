@@ -1,0 +1,125 @@
+EditToolbar: EditToolbar {}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+FirstName: WOTextField {
+	value = author.firstName;
+	name = "FirstName";
+}
+
+MiddleName: WOTextField {
+	value = author.middleName;
+	name = "MiddleName";
+}
+
+LastName: WOTextField {
+	value = author.lastName;
+	name = "LastName";
+}
+
+PreferredName: WOTextField {
+	value = author.preferredName;
+	name = "PreferredName";
+}
+
+Email: WOTextField {
+	size = 50;
+	value = author.email;
+	name = "Email";
+}
+
+AuthorTitlePopUp: WOPopUpButton {
+	list = authorTitleList;
+	name = "authorTitle";
+	noSelectionString = "[choose author title]";
+	item = authorTitleItem;
+	displayString = authorTitleItem.title;
+	selection = author.authorTitle;
+}
+
+ActiveAuthor: WOCheckBox {
+	checked = author.active;
+	name = "activeAuthor";
+}
+
+
+ShowAddButton: WOConditional {
+	condition = showAddButton;
+}
+
+AddButton: WOSubmitButton {
+	action = addAuthor;
+	value = "Add";
+	name = "Add";
+}
+
+ShowUpdateButton: WOConditional {
+	condition = showUpdateButton;
+}
+
+UpdateButton: WOSubmitButton {
+	action = updateAuthor;
+	value = "Update";
+	name = "Update";
+}
+
+FirstItem: WOString {
+	value = displayGroup.indexOfFirstDisplayedObject;
+}
+
+LastItem: WOString {
+	value = displayGroup.indexOfLastDisplayedObject;
+}
+
+TotalItemsFound: WOString {
+	value = displayGroup.allObjects.count;
+}
+
+MultiBatchCondition: WOConditional {
+	condition = displayGroup.hasMultipleBatches;
+}
+
+PreviousBatch: WOHyperlink {
+	action = displayGroup.displayPreviousBatch;
+}
+
+NextBatch: WOHyperlink {
+	action = displayGroup.displayNextBatch;
+}
+
+AuthorNameQuery: WOTextField {
+	size = 10;
+	value = displayGroup.queryBindings.name;
+	name = "authorNameQuery";
+}
+
+AuthorSearchButton: WOSubmitButton {
+	action = displayGroup.qualifyDisplayGroup;
+	value = "Find Authors";
+	name = "findAuthors";
+}
+
+AllAuthorsButton: WOSubmitButton {
+	action = findAllAuthors;
+	value = "Show All Authors";
+	name = "findAllAuthors";
+}
+
+Repetition2: WORepetition {
+	item = authorItem;
+	list = displayGroup.displayedObjects;
+}
+
+ItemName: WOString {
+	value = authorItem.preferredName;
+}
+
+EditLink: WOHyperlink {
+	action = editAuthor;
+}
+
+DeleteLink: WOHyperlink {
+	action = deleteAuthor;
+}

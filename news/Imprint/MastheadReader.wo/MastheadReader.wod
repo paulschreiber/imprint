@@ -1,0 +1,15 @@
+ReaderTopBar: ReaderTopBar {}
+
+MastheadCondition: WOConditional {
+	condition = noMastheadFound;
+	negate = true;
+}
+
+SectionContent: WOString {
+	value = issueMasthead.content;
+	escapeHTML = false;
+}
+
+NoMastheadCondition: WOConditional {
+	condition = noMastheadFound;
+}

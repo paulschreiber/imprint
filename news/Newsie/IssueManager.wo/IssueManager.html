@@ -1,0 +1,44 @@
+<WEBOBJECT NAME=EditToolbar>
+
+	<WEBOBJECT NAME=Form1>
+	<div class="backEndForm">
+	
+	<table border="0" cellpadding="2" cellspacing="0">
+	<tr>
+		<th>Issue date</th>
+		<td class="backEndCell"><webobject name=IssueDateField></webobject> (YYYY-MM-DD)</td>
+	</tr>
+	<tr><th>Volume number</th><td><webobject name=VolumeNumber></webobject></td></tr>
+	<tr><th>Issue number</th><td><webobject name=IssueNumber></webobject></td></tr>
+	<tr><td></td>
+		<td class="backEndCell">
+		<WEBOBJECT NAME=ShowAddButton><webobject name=AddButton></webobject></WEBOBJECT>
+		<WEBOBJECT NAME=ShowUpdateButton><webobject name=UpdateButton></webobject></WEBOBJECT>
+		</td>
+	</tr>
+	</table>
+
+	</div>
+
+	<div class="backEndList">
+	
+	<P>Displaying issue(s) <WEBOBJECT NAME=FirstItem></WEBOBJECT> to <WEBOBJECT NAME=LastItem></WEBOBJECT> [of <WEBOBJECT NAME=TotalItemsFound></WEBOBJECT>].  <WEBOBJECT NAME=MultiBatchCondition> [<WEBOBJECT NAME=PreviousBatch>Previous</WEBOBJECT> | <WEBOBJECT NAME=NextBatch>Next</WEBOBJECT>]</WEBOBJECT><BR></P>
+			
+			
+	<TABLE BORDER=0 CELLPADDING=3 CELLSPACING=0>
+	<TR><TH>Issue Date</TH><TH></TH><TH></TH></TR>
+	<WEBOBJECT NAME=Repetition1>
+	<TR class="backEndRow">
+		<TD class="backEndCell"><WEBOBJECT NAME=IssueDate></WEBOBJECT></TD>
+		<TD><WEBOBJECT NAME=EditLink>edit</WEBOBJECT></TD>
+		<TD><WEBOBJECT NAME=DeleteLink>delete</WEBOBJECT></TD>
+	</TR>
+	</WEBOBJECT>
+
+	</table>
+
+	</div>
+
+	</WEBOBJECT>
+	
+</webobject>

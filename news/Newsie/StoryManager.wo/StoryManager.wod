@@ -1,0 +1,368 @@
+EditToolbar: EditToolbar {}
+
+Form1: WOForm {
+	multipleSubmit = true;
+	enctype = "multipart/form-data";
+}
+
+FormIncompleteCondition: WOConditional {
+	condition = showWarning;
+}
+
+StoryAssistantCondition: WOConditional {
+	condition = showStoryAssistant;
+}
+
+StoryAssistantPopUp: WOPopUpButton {
+	list = storyHelperList;
+	noSelectionString = "[optional story assistant]";
+	selection = storyAssistant;
+}
+
+CaroonWarningCondition: WOConditional {
+	condition = showCartoonWarning;
+}
+
+SSWarningCondition: WOConditional {
+	condition = showSSWarning;
+}
+
+CQWarningCondition2: WOConditional {
+	condition = showCQWarning;
+}
+
+RegularWriter: WOConditional {
+	condition = showAuthorPopUps;
+}
+
+AuthorPopUp: WOPopUpButton {
+	list = authorList;
+	name = "author";
+	noSelectionString = "[choose author]";
+	item = authorItem;
+	displayString = authorItem.preferredName;
+	selection = story.author;
+}
+
+Author2PopUp: WOPopUpButton {
+	list = authorList;
+	name = "author2";
+	noSelectionString = "[choose author]";
+	item = authorItem2;
+	displayString = authorItem2.preferredName;
+	selection = story.author2;
+}
+
+ThirdAuthorCondition: WOConditional {
+	condition = showStoryText;
+}
+
+Author3PopUp: WOPopUpButton {
+	list = authorList;
+	name = "author3";
+	noSelectionString = "[choose author]";
+	item = authorItem3;
+	displayString = authorItem3.preferredName;
+	selection = story.author3;
+}
+
+OpinionWriter: WOConditional {
+	condition = showAuthorPopUps;
+	negate = true;
+}
+
+AuthorName: WOTextField {
+	name = "authorName";
+	value = authorName;
+}
+
+AuthorYear: WOTextField {
+	name = "authorYear";
+	value = authorYear;
+}
+
+HeadlineCondition: WOConditional {
+
+	condition = showHeadline;
+}
+
+Headline: WOTextField {
+	value = story.headline;
+	size = 60;
+	name = "Headline";
+}
+
+ColumnNameHeadlineCondition: WOConditional {
+	condition = showLedeDetect;
+}
+
+ColumnNameCheck: WOCheckBox {
+	checked = useColumnName;
+}
+
+Subhead: WOTextField {
+	value = story.subhead;
+	size = 60;
+	name = "Subhead";
+}
+
+SectionPopUp: WOPopUpButton {
+	list = sectionList;
+	name = "section";
+	noSelectionString = "[choose section]";
+	item = sectionItem;
+	displayString = sectionItem.sectionName;
+	selection = story.section;
+}
+
+IssuePopUp: WOPopUpButton {
+	list = issueList;
+	name = "issue";
+	noSelectionString = "[choose issue]";
+	item = issueItem;
+	displayString = issueItem.IsoDate;
+	selection = story.issue;
+}
+
+ColumnPopUp: WOPopUpButton {
+	list = columnList;
+	name = "column";
+	noSelectionString = "[choose column]";
+	item = columnItem;
+	displayString = columnItem.columnName;
+	selection = story.column;
+}
+
+StoryTypePopUp: WOPopUpButton {
+	list = storyTypeList;
+	name = "storyType";
+	noSelectionString = "[choose story type]";
+	item = storyTypeItem;
+	displayString = storyTypeItem.storyType;
+	selection = story.storyType;
+}
+
+ReviewInfoCondition: WOConditional {
+	condition = showReviewInfo;
+}
+
+ReviewLine1: WOTextField {
+	name = "reviewLine1";
+	value = reviewLine1;
+}
+
+ReviewLine2: WOTextField {
+	name = "reviewLine2";
+	value = reviewLine2;
+}
+
+ReviewLine3: WOTextField {
+	name = "reviewLine3";
+	value = reviewLine3;
+}
+
+FileUploadCondition: WOConditional {
+	condition = showFileUpload;
+}
+
+FileUpload: WOFileUpload {
+	data = aFileContents;
+	filePath = aFileName;
+}
+
+StoryTextCondition: WOConditional {
+	condition = showStoryText;
+}
+
+storyContentsText: WOText {
+	cols = 80;
+	name = "storyContents";
+	rows = 15;
+	value = story.contents;
+}
+
+LedeCheckboxCondition: WOConditional {
+	condition = showLedeDetect;
+}
+
+LedeCheckbox: WOCheckBox {
+	checked = detectLede;
+}
+
+CanConCondition: WOConditional {
+	condition = showCanCon;
+}
+
+CanCon1: WOCheckBox {
+	checked = canCon1;
+}
+
+CanCon2: WOCheckBox {
+	checked = canCon2;
+}
+
+CanCon3: WOCheckBox {
+	checked = canCon3;
+}
+
+CanCon4: WOCheckBox {
+	checked = canCon4;
+}
+
+CanCon5: WOCheckBox {
+	checked = canCon5;
+}
+
+CanCon6: WOCheckBox {
+	checked = canCon6;
+}
+
+CanCon7: WOCheckBox {
+	checked = canCon7;
+}
+
+CanCon8: WOCheckBox {
+	checked = canCon8;
+}
+
+CanCon9: WOCheckBox {
+	checked = canCon9;
+}
+
+CanCon10: WOCheckBox {
+	checked = canCon10;
+}
+
+EditorsResponseCondition: WOConditional {
+	condition = showEditorsResponse;
+}
+
+ResponseText: WOText {
+	cols = 80;
+	value = editorsResponse;
+	rows = 3;
+}
+
+CaptionTextCondition: WOConditional {
+	condition = showCaptionText;
+}
+
+CaptionContentsText: WOText {
+	cols = 80;
+	value = story.contents;
+	rows = 3;
+}
+
+StoryAssistantButtonCondition: WOConditional {
+	condition = showStoryAssistant;
+}
+
+StoryAssistantButton: WOSubmitButton {
+	action = setStoryAssistant;
+	name = "storyAssistant";
+	value = "Use Story Assistant";
+}
+
+ShowAddButton: WOConditional {
+	condition = showAddButton;
+}
+
+AddButton: WOSubmitButton {
+	action = addStory;
+	value = "Add";
+	name = "Add";
+}
+
+ShowUpdateButton: WOConditional {
+	condition = showUpdateButton;
+}
+
+UpdateButton: WOSubmitButton {
+	action = updateStory;
+	value = "Update";
+	name = "Update";
+}
+
+FirstItem: WOString {
+	value = displayGroup.indexOfFirstDisplayedObject;
+}
+
+LastItem: WOString {
+	value = displayGroup.indexOfLastDisplayedObject;
+}
+
+TotalItemsFound: WOString {
+	value = displayGroup.allObjects.count;
+}
+
+MultiBatchCondition: WOConditional {
+	condition = displayGroup.hasMultipleBatches;
+}
+
+PreviousBatch: WOHyperlink {
+	action = displayGroup.displayPreviousBatch;
+}
+
+NextBatch: WOHyperlink {
+	action = displayGroup.displayNextBatch;
+}
+
+IssuePopUpBottom: WOPopUpButton {
+	list = issueList;
+	name = "issueForDG";
+	noSelectionString = "[choose issue]";
+	item = selectedIssueItem;
+	displayString = selectedIssueItem.IsoDate;
+	selection = selectedIssueItem;
+}
+
+SectionPopUpBottom: WOPopUpButton {
+	list = sectionList;
+	name = "sectionForDG";
+	noSelectionString = "[choose section]";
+	item = selectedSectionItem;
+	displayString = selectedSectionItem.sectionName;
+	selection = selectedSectionItem;
+}
+
+SubmitButton3: WOSubmitButton {
+	action = GetIssueStories;
+	value = "Get Stories";
+}
+
+Repetition2: WORepetition {
+	item = storyItem;
+	list = displayGroup.displayedObjects;
+}
+
+HeadlineItem: WOString {
+	value = storyItem.headline;
+	escapeHTML = false;
+}
+
+SectionItem: WOString {
+	value = storyItem.section.sectionName;
+	escapeHTML = false;
+}
+
+PreviewLink: WOHyperlink {
+	href = storyItem.linkPreview;
+	target = "_blank";
+}
+
+EditLink: WOHyperlink {
+	action = editStory;
+}
+
+DeleteLink: WOHyperlink {
+	action = deleteStory;
+}
+
+CanConCondition2: WOConditional {
+	condition = showCanCon;
+}
+
+Headline2: WOTextField {
+	value = story.headline;
+	size = 60;
+}

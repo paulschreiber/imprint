@@ -1,0 +1,158 @@
+<WEBOBJECT NAME=EditToolbar>
+
+	<WEBOBJECT NAME=Form1>
+	<div class="backEndForm">
+	
+	<WEBOBJECT NAME=FormIncompleteCondition>
+	<P CLASS=warning>Please enter the headline and select the section and issue.</P></WEBOBJECT>
+	
+	<table border="0" cellpadding="0" cellspacing="2" width="100%">
+<webobject name=StoryAssistantCondition>
+	<tr>
+		<th>Story assistant</th>
+		<td><webobject name=StoryAssistantPopUp></webobject> 
+		<WEBOBJECT NAME=CaroonWarningCondition>
+		<p class="warning">For cartoons, you must select the column name.</p>
+		</WEBOBJECT>
+		<WEBOBJECT NAME=SSWarningCondition><P CLASS=warning>Please enter the headline and select the issue date and section before using the Slide Show Assistant.</P></WEBOBJECT><WEBOBJECT NAME=CQWarningCondition2><P CLASS=warning>Please enter the headline and select the issue date and the photographer (first author) before using the Campus Question assistant. If two people did the Campus Question, make the non-photographer the second author.</P><P CLASS=warning>Then, click &quot;Campus Question Assistant.&quot; Don't click &quot;Add.&quot;</P></WEBOBJECT>
+		</td>
+	</tr>
+</webobject>
+<webobject name=RegularWriter>
+	 <tr>
+		<th>Author</th>
+		<td><WEBOBJECT NAME=AuthorPopUp></WEBOBJECT>
+			<BR><WEBOBJECT NAME=Author2PopUp></WEBOBJECT>
+			<BR><WEBOBJECT NAME=ThirdAuthorCondition><WEBOBJECT NAME=Author3PopUp></WEBOBJECT></WEBOBJECT>
+		</td>
+	</tr>
+</webobject>
+
+<webobject name=OpinionWriter>
+	<tr>
+		<th>Author</th>
+		<td>
+			<table border="0" cellpadding="2" cellspacing="0">
+			<tr><th>Name</th><td><webobject name=AuthorName></webobject></td></tr>
+			<tr><th>Title</th><td><webobject name=AuthorYear></webobject></td></tr>
+			
+			</table>
+		</td>
+	</tr>
+</webobject>
+
+<webobject name=HeadlineCondition>
+	<tr>
+		<th>Headline</th>
+		<td><WEBOBJECT NAME=Headline></WEBOBJECT><BR><WEBOBJECT NAME=ColumnNameHeadlineCondition><WEBOBJECT NAME=ColumnNameCheck></WEBOBJECT>Use column name instead of headline</WEBOBJECT>
+		</td>
+	</tr>
+	<tr><th>Subhead</th><td><WEBOBJECT NAME=Subhead></WEBOBJECT></td></tr>
+</webobject>
+
+	<tr><th>Section</th><td><WEBOBJECT NAME=SectionPopUp></WEBOBJECT></td></tr>
+	<tr><th>Issue</th><td><WEBOBJECT NAME=IssuePopUp></WEBOBJECT></td></tr>
+
+	<tr><th>Column</th><td><WEBOBJECT NAME=ColumnPopUp></WEBOBJECT></td></tr>
+	<tr><th>Story Type</th><td><WEBOBJECT NAME=StoryTypePopUp></WEBOBJECT></td></tr>
+
+<webobject name=ReviewInfoCondition>
+	<tr>
+		<th>Review Info</th>
+		<td>
+			<table border="0" cellpadding="2" cellspacing="0">
+			<tr><th>Title/Performer</th><td><webobject name=ReviewLine1></webobject></td></tr>
+			<tr><th>Artist/Author/Venue</th><td><webobject name=ReviewLine2></webobject></td></tr>
+			<tr><th>Label/Publisher/Date</th><td><webobject name=ReviewLine3></webobject></td></tr>
+			</table>
+		</td>
+	</tr>
+</webobject>
+
+<webobject name=FileUploadCondition>
+	<tr>
+		<th VALIGN=TOP>Cartoon/Photo</th>
+		<td><WEBOBJECT NAME=FileUpload></WEBOBJECT></td>
+	</tr>
+</webobject>
+
+<webobject name=StoryTextCondition>
+	<tr>
+		<th>Story</th>
+		<td>
+			<WEBOBJECT NAME=storyContentsText></WEBOBJECT>
+			<BR><WEBOBJECT NAME=LedeCheckboxCondition><WEBOBJECT NAME=LedeCheckbox></WEBOBJECT>Automatically detect lead paragraph</WEBOBJECT></td>
+	</tr>
+</webobject>
+
+<WEBOBJECT NAME=CanConCondition><tr>
+	<th>Canadian Content</th>
+	<td>
+		<table cellspacing=0 border=0 cellpadding=2>
+			<tr>
+				<td><webobject NAME=CanCon1></webobject> 1</td>
+				<td><webobject name=CanCon2></webobject> 2</td>
+				<td><webobject name=CanCon3></webobject> 3</td>
+				<td><webobject name=CanCon4></webobject> 4</td>
+				<td><webobject name=CanCon5></webobject> 5</td>
+				<td><webobject name=CanCon6></webobject> 6</td>
+				<td><webobject name=CanCon7></webobject> 7</td>
+				<td><webobject name=CanCon8></webobject> 8</td>
+				<td><webobject name=CanCon9></webobject> 9</td>
+				<td><webobject name=CanCon10></webobject> 10</td>
+			</tr>
+		</table>
+	</td>
+</tr></WEBOBJECT><WEBOBJECT NAME=EditorsResponseCondition><TR><TH>Editor's Response</TH><TD><WEBOBJECT NAME=ResponseText></WEBOBJECT></TD></TR></WEBOBJECT><webobject NAME=CaptionTextCondition>
+	<tr>
+		<th>Caption</th>
+		<td><WEBOBJECT NAME=CaptionContentsText></WEBOBJECT></td>
+	</tr>
+</webobject>
+
+	<tr>
+		<td></td>
+		<td>
+
+		<WEBOBJECT NAME=StoryAssistantButtonCondition>
+		<webobject name=StoryAssistantButton></webobject>
+		</webobject>
+		
+		<WEBOBJECT NAME=ShowAddButton><webobject name=AddButton></webobject></WEBOBJECT>
+		<WEBOBJECT NAME=ShowUpdateButton><webobject name=UpdateButton></webobject></WEBOBJECT>
+		</td>
+	</tr>
+	</table>
+	
+	</div>
+
+	<div class="backEndList">
+	
+	<P>Displaying story(ies) <WEBOBJECT NAME=FirstItem></WEBOBJECT> to <WEBOBJECT NAME=LastItem></WEBOBJECT> [of <WEBOBJECT NAME=TotalItemsFound></WEBOBJECT>].  <WEBOBJECT NAME=MultiBatchCondition> [<WEBOBJECT NAME=PreviousBatch>Previous</WEBOBJECT> | <WEBOBJECT NAME=NextBatch>Next</WEBOBJECT>]</WEBOBJECT><BR></P>
+
+	<P>Show stories from issue <WEBOBJECT NAME=IssuePopUpBottom></WEBOBJECT> in section <WEBOBJECT NAME=SectionPopUpBottom></WEBOBJECT> <WEBOBJECT NAME=SubmitButton3></WEBOBJECT><BR></P>
+	
+	<TABLE BORDER=0 CELLPADDING=3 CELLSPACING=0>
+	<TR>
+	<TH>Headline</TH>
+	<TH>Section</TH>
+	<TD></TD><TH></TH>
+	<TH></TH>
+	</TR>
+	
+	<WEBOBJECT NAME=Repetition2>
+	    <TR class="backEndRow">
+		<TD class="backEndCell"><webobject NAME=HeadlineItem></WEBOBJECT></TD>
+		<TD><webobject NAME=SectionItem></WEBOBJECT></TD>
+		<TD><WEBOBJECT NAME=PreviewLink>preview</WEBOBJECT></TD><TD><WEBOBJECT NAME=EditLink>edit</WEBOBJECT></TD>
+		<TD><WEBOBJECT NAME=DeleteLink>delete</WEBOBJECT></TD>
+	    </TR>
+	</WEBOBJECT>
+	
+	</table>
+
+	</div>
+
+	</WEBOBJECT>
+	
+</webobject>

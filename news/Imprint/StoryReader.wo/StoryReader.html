@@ -1,0 +1,66 @@
+<WEBOBJECT NAME=ReaderTopBar>
+
+<table border="0" cellpadding="5" cellspacing="0" width="100%">
+
+<WEBOBJECT NAME=StoryFoundCondition>
+
+
+	<tr>
+	<td width="70%" valign="top">
+	<p class="sectionInfo"><WEBOBJECT NAME=SectionName></WEBOBJECT>
+	<WEBOBJECT NAME=ColumnConditional>&gt; <WEBOBJECT NAME=ColumnName></WEBOBJECT></WEBOBJECT>
+	</p>
+
+	<H1 class="headline"><WEBOBJECT NAME=Headline></WEBOBJECT></H1>
+	<WEBOBJECT NAME=SubheadConditional><h2 class="subhead"><WEBOBJECT NAME=Subhead></WEBOBJECT></h2></WEBOBJECT>
+		
+	<WEBOBJECT NAME=BylineCondition>
+	<P CLASS=byline>by <WEBOBJECT NAME=AuthorName></WEBOBJECT> 
+	<WEBOBJECT NAME=BylineCondition2>
+	&gt; <I><WEBOBJECT NAME=Byline></WEBOBJECT></I>
+	</WEBOBJECT>
+	</P>
+	</WEBOBJECT>
+
+	<WEBOBJECT NAME=StoryContents></WEBOBJECT>
+
+	<p class="storyFooter">Alternate story views:
+	<webobject name=LiteLink>text-only</webobject> | <webobject name=NITFLink>NITF XML</webobject></p>
+
+	</td>
+
+	<td width="30%" valign="top" align="right">
+
+	<webobject name=AssetConditional>
+		<WEBOBJECT NAME=StoryAssetList>
+
+		<p class="photoCredit">
+		<WEBOBJECT NAME=AssetImageCondition><webobject name=StoryImage></webobject></WEBOBJECT>
+		<WEBOBJECT NAME=AssetEmbedCondition><WEBOBJECT NAME=AssetEmbed></WEBOBJECT></WEBOBJECT>
+		<webobject name=AssetDownloadCondition>Download: <webobject name=AssetDownloadLink></webobject></webobject>
+		<br><webobject name=AssetAuthor></webobject></p>
+		<WEBOBJECT NAME=CaptionCondition>
+		<p class="photoCaption"><webobject name=AssetCaption></webobject></p>
+		</WEBOBJECT>
+
+		</WEBOBJECT>
+	</WEBOBJECT>
+
+	</td>
+	</tr>
+
+
+</WEBOBJECT>
+
+<WEBOBJECT NAME=NoStoryFoundCondition>
+<tr>
+	<td width="70%" valign="top">
+	Sorry, that story doesn't exist.
+	</td>
+</tr>
+</WEBOBJECT>
+
+</table>
+
+</WEBOBJECT>
+

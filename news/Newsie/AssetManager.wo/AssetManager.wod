@@ -1,0 +1,177 @@
+EditToolbar: EditToolbar {}
+
+ShowAddButton: WOConditional {
+	condition = showAddButton;
+}
+
+ShowUpdateButton: WOConditional {
+	condition = showUpdateButton;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+	enctype = "multipart/form-data";
+}
+
+FormIncompleteCondition: WOConditional {
+	condition = showWarning;
+}
+
+UploadFailedCondition: WOConditional {
+	condition = showUploadFailed;
+}
+
+AuthorPopUp: WOPopUpButton {
+	list = authorList;
+	name = "author";
+	noSelectionString = "[choose author]";
+	item = authorItem;
+	displayString = authorItem.preferredName;
+	selection = asset.author;
+}
+
+AuthorPopUp2: WOPopUpButton {
+	list = authorList;
+	name = "author2";
+	noSelectionString = "[choose author]";
+	item = authorItem2;
+	displayString = authorItem2.preferredName;
+	selection = asset.author2;
+}
+
+IssuePopUp: WOPopUpButton {
+	list = issueList;
+	name = "issue";
+	noSelectionString = "[choose issue]";
+	item = issueItem;
+	displayString = issueItem.IsoDate;
+	selection = asset.issue;
+}
+
+CaptionText: WOText {
+	value = asset.caption;
+	cols = 70;
+	rows = 3;
+	name = "caption";
+}
+
+HideCaption: WOCheckBox {
+	checked = asset.hideCaption;
+	name = "hideCaption";
+}
+
+FileUpload: WOFileUpload {
+	data = aFileContents;
+	filePath = aFileName;
+}
+
+FilePreviewCondition: WOConditional {
+	condition = hasUploadData;
+}
+
+assetLocation: WOTextField {
+	value = asset.location;
+	size = 70;
+	name = "Location";
+}
+
+AssetIsImageCondition: WOConditional {
+	condition = asset.isImage;
+}
+
+Image: WOImage {
+	src = asset.location;
+}
+
+AssetIsMovieCondition: WOConditional {
+	condition = asset.isEmbedded;
+}
+
+AssetIsDownloadCondition: WOConditional {
+	condition = asset.isDownloadable;
+}
+
+AssetDownloadLink: WOHyperlink {
+	href = asset.location;
+	string = asset.fileName;
+}
+
+AssetEmbed: WOEmbeddedObject {
+	src = asset.location;
+}
+
+AddButton: WOSubmitButton {
+	action = addAsset;
+	value = "Add";
+	name = "Add";
+}
+
+UpdateButton: WOSubmitButton {
+	action = updateAsset;
+	value = "Update";
+	name = "Update";
+}
+
+FirstItem: WOString {
+	value = displayGroup.indexOfFirstDisplayedObject;
+}
+
+LastItem: WOString {
+	value = displayGroup.indexOfLastDisplayedObject;
+}
+
+TotalItemsFound: WOString {
+	value = displayGroup.allObjects.count;
+}
+
+MultiBatchCondition: WOConditional {
+	condition = displayGroup.hasMultipleBatches;
+}
+
+PreviousBatch: WOHyperlink {
+	action = displayGroup.displayPreviousBatch;
+}
+
+NextBatch: WOHyperlink {
+	action = displayGroup.displayNextBatch;
+}
+
+IssuePopUpBottom: WOPopUpButton {
+	list = issueList;
+	name = "issueForDG";
+	noSelectionString = "[choose issue]";
+	item = selectedIssueItem;
+	displayString = selectedIssueItem.IsoDate;
+	selection = selectedIssueItem;
+}
+
+SubmitButton3: WOSubmitButton {
+	action = GetIssueStories;
+	value = "Get Photos";
+}
+
+Repetition2: WORepetition {
+	item = assetItem;
+	list = displayGroup.displayedObjects;
+}
+
+ItemCaption: WOString {
+	value = assetItem.caption;
+	escapeHTML = false;
+}
+
+DateItem: WOString {
+	value = assetItem.issue.IsoDate;
+}
+
+EditLink: WOHyperlink {
+	action = editAsset;
+}
+
+DeleteLink: WOHyperlink {
+	action = deleteAsset;
+}
+
+String3: WOString {
+	value = asset.location;
+}

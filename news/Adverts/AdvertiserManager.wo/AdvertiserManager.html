@@ -1,0 +1,51 @@
+<WEBOBJECT NAME=AdToolbar>
+
+	<WEBOBJECT NAME=Form1>
+	<div class="backEndForm">
+
+	<table border="0" cellpadding="2" cellspacing="0">
+	<tr><th>Company Name</th><td><WEBOBJECT NAME=Company></WEBOBJECT></td></tr>
+	<tr><th>First Name</th><td><WEBOBJECT NAME=FirstName></WEBOBJECT></td></tr>
+	<tr><th>Last Name</th><td><WEBOBJECT NAME=LastName></WEBOBJECT></td></tr>
+	<tr><th>Email</th><td><WEBOBJECT NAME=Email></WEBOBJECT></td></tr>
+	<tr><th>Phone</th><td><WEBOBJECT NAME=Phone></WEBOBJECT></td></tr>
+
+	<tr>
+		<td></td>
+		<td>
+		<WEBOBJECT NAME=AddButton></WEBOBJECT>
+		<WEBOBJECT NAME=UpdateButton></WEBOBJECT>
+		</td>
+	</tr>
+	
+	</table>
+
+	</div>
+
+	<div class="backEndList">
+		
+	<P>Displaying issue(s) <WEBOBJECT NAME=FirstItem></WEBOBJECT> to <WEBOBJECT NAME=LastItem></WEBOBJECT> [of <WEBOBJECT NAME=TotalItemsFound></WEBOBJECT>]. <WEBOBJECT NAME=MultiBatchCondition> [<WEBOBJECT NAME=PreviousBatch>Previous</WEBOBJECT> | <WEBOBJECT NAME=NextBatch>Next</WEBOBJECT>]</WEBOBJECT><BR></P>
+
+	
+	<TABLE BORDER=0 CELLPADDING=3 CELLSPACING=0>
+	<TR>
+	<TH>Company Name</TH>
+	<TH></TH>
+	<TH></TH>
+	</TR>
+	
+	<WEBOBJECT NAME=Repetition2>
+	    <TR class="backEndRow">
+		<TD class="backEndCell"><WEBOBJECT NAME=AdvertisterName></WEBOBJECT></TD>
+		<TD><WEBOBJECT NAME=EditLink>edit</WEBOBJECT></TD>
+		<TD><WEBOBJECT NAME=DeleteLink>delete</WEBOBJECT></TD>
+	    </TR>
+	</WEBOBJECT>
+	
+	</table>
+
+	</div>
+
+	</WEBOBJECT>
+	
+</webobject>

@@ -1,0 +1,59 @@
+<webobject name=AdToolbar>
+
+	<WEBOBJECT NAME=Form1>
+	<div class="backEndForm">
+
+	<table border="0" cellpadding="2" cellspacing="0">
+
+	<tr><th>Advertiser</th><td><WEBOBJECT NAME=AdvertiserPopUp></WEBOBJECT></td></tr>
+	<tr><th>Store with this issue</th><td><webobject NAME=IssuePopUp></webobject></td></tr>
+	<tr><th>Artwork Name</th><td><webobject NAME=AdCreativeName></webobject></td></tr>
+	<tr><th>URL</th><td><webobject NAME=AdCreativeUrl></webobject></td></tr>
+	<tr><th>File</th><td><WEBOBJECT NAME=FileUpload></WEBOBJECT></td></tr>
+
+	<webobject NAME=FilePreviewCondition>
+	<tr><th>Location</th><td><webobject name=assetLocation></webobject></td></tr>
+	<tr><th>Preview</th><td><webobject name=BannerLink><webobject NAME=ImagePreview></webobject></webobject></td></tr>
+	</webobject>
+	
+	<tr>
+		<td></td>
+		<td>
+			<WEBOBJECT NAME=AddButton></WEBOBJECT>
+			<WEBOBJECT NAME=UpdateButton></WEBOBJECT>
+		</td>
+	</tr>
+	</table>
+
+	</div>
+
+	<div class="backEndList">
+	
+	<P>Displaying ad artwork item(s) <WEBOBJECT NAME=FirstItem></WEBOBJECT> to <WEBOBJECT NAME=LastItem></WEBOBJECT> [of <WEBOBJECT NAME=TotalItemsFound></WEBOBJECT>].<WEBOBJECT NAME=MultiBatchCondition>  [<WEBOBJECT NAME=PreviousBatch>Previous</WEBOBJECT> | <WEBOBJECT NAME=NextBatch>Next</WEBOBJECT>]</WEBOBJECT><BR></P>
+	
+	<TABLE BORDER=0 CELLPADDING=3 CELLSPACING=0>
+	<TR>
+	<th>Issue</th>
+	<TH>Artwork</TH>
+	<th>Advertiser</th>
+	<TH></TH>
+	<TH></TH>
+	</TR>
+	
+	<WEBOBJECT NAME=Repetition2>
+	    <TR class="backEndRow">
+		<td class="backEndCell"><webobject name=AdCreativeItemIssue></webobject></td>
+		<TD class="backEndCell"><WEBOBJECT NAME=AdCreativeItemName></WEBOBJECT></TD>
+		<td><webobject name=AdCreativeItemAdvertiser></webobject></td>
+		<TD><WEBOBJECT NAME=EditLink>edit</WEBOBJECT></TD>
+		<TD><WEBOBJECT NAME=DeleteLink>delete</WEBOBJECT></TD>
+	    </TR>
+	</WEBOBJECT>
+	
+	</table>
+	
+	</div>
+	
+	</WEBOBJECT>
+
+</webobject>

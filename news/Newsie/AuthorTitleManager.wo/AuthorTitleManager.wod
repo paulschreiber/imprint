@@ -1,0 +1,71 @@
+EditToolbar: EditToolbar {}
+
+ShowAddButton: WOConditional {
+	condition = showAddButton;
+}
+
+ShowUpdateButton: WOConditional {
+	condition = showUpdateButton;
+}
+
+MultiBatchCondition: WOConditional {
+	condition = displayGroup.hasMultipleBatches;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+AuthorTitle: WOTextField {
+	value = authorTitle.title;
+	name = "AuthorTitle";
+}
+
+AddButton: WOSubmitButton {
+	action = addAuthorTitle;
+	value = "Add";
+	name = "Update";
+}
+
+UpdateButton: WOSubmitButton {
+	action = updateAuthorTitle;
+	value = "Update";
+	name = "Update";
+}
+
+FirstItem: WOString {
+	value = displayGroup.indexOfFirstDisplayedObject;
+}
+
+LastItem: WOString {
+	value = displayGroup.indexOfLastDisplayedObject;
+}
+
+TotalItemsFound: WOString {
+	value = displayGroup.allObjects.count;
+}
+
+PreviousBatch: WOHyperlink {
+	action = displayGroup.displayPreviousBatch;
+}
+
+NextBatch: WOHyperlink {
+	action = displayGroup.displayNextBatch;
+}
+
+Repetition2: WORepetition {
+	item = authorTitleItem;
+	list = displayGroup.displayedObjects;
+}
+
+ItemTitle: WOString {
+	value = authorTitleItem.title;
+}
+
+EditLink: WOHyperlink {
+	action = editAuthorTitle;
+}
+
+DeleteLink: WOHyperlink {
+	action = deleteAuthorTitle;
+}

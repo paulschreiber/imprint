@@ -1,0 +1,62 @@
+PageTitle: WOString {
+        value = session.pageTitle;
+}
+
+NavTitle: WOString {
+	value = session.pageTitle;
+}
+
+EditIssues: WOHyperlink {
+	pageName = "IssueManager";
+}
+
+EditStories: WOHyperlink {
+	pageName = "StoryManager";
+}
+
+EditAssets: WOHyperlink {
+	pageName = "AssetManager";
+}
+
+EditStoryAssets: WOHyperlink {
+	pageName = "StoryAssetManager";
+}
+
+EditSectionFronts: WOHyperlink {
+	pageName = "SectionFrontManager";
+}
+
+EditMastheads: WOHyperlink {
+	pageName = "MastheadManager";
+}
+
+EditIssueFronts: WOHyperlink {
+	pageName = "IssueFrontManager";
+}
+
+EditColumns: WOHyperlink {
+	pageName = "ColumnManager";
+}
+
+EditSections: WOHyperlink {
+	pageName = "SectionManager";
+}
+
+EditAuthors: WOHyperlink {
+	pageName = "AuthorManager";
+}
+
+EditStoryTypes: WOHyperlink {
+	pageName = "StoryTypeManager";
+}
+
+EditAuthorTitles: WOHyperlink {
+	pageName = "AuthorTitleManager";
+}
+
+
+EditPreferences: WOHyperlink {
+	pageName = "PreferencesManager";
+}
+
+ParentContent: WOComponentContent {};

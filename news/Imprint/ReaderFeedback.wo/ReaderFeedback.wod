@@ -1,0 +1,21 @@
+ReaderTopBar: ReaderTopBar {}
+
+Conditional1: WOConditional {
+	condition = allDone;
+}
+
+Conditional2: WOConditional {
+	condition = allDone;
+	negate = true;
+}
+
+Form1: WOForm {
+	multipleSubmit = true;
+	directActionName = "feedback";
+	method = "POST";
+	actionClass = "DirectAction";
+}
+
+SubmitFeedback: WOSubmitButton {
+	value = "Talk to Imprint";
+}

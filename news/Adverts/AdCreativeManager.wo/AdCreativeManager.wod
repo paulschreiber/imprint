@@ -1,0 +1,120 @@
+AdToolbar: AdToolbar {}
+
+Form1: WOForm {
+	multipleSubmit = true;
+	enctype = "multipart/form-data";
+}
+
+AdvertiserPopUp: WOPopUpButton {
+	list = advertiserList;
+	name = "advertiser";
+	noSelectionString = "[choose advertiser]";
+	item = advertiserItem;
+	displayString = advertiserItem.company;
+	selection = adCreative.advertiser;
+}
+
+IssuePopUp: WOPopUpButton {
+	list = issueList;
+	name = "issue";
+	noSelectionString = "[choose issue]";
+	item = issueItem;
+	displayString = issueItem.IsoDate;
+	selection = adCreative.issue;
+}
+
+AdCreativeName: WOTextField {
+	value = adCreative.name;
+	name = "AdCreativeName";
+}
+
+AdCreativeUrl: WOTextField {
+	name = "adCreativeUrl";
+	value = adCreative.url;
+	size = 60;
+}
+
+FileUpload: WOFileUpload {
+	data = aFileContents;
+	filePath = aFileName;
+}
+
+FilePreviewCondition: WOConditional {
+	condition = hasUploadData;
+}
+
+assetLocation: WOTextField {
+	value = adCreative.location;
+	size = 70;
+}
+
+BannerLink: WOHyperlink {
+	href = adCreative.url;
+}
+
+ImagePreview: WOImage {
+	mimeType = "image/jpeg";
+	src = adCreative.location;
+}
+
+AddButton: WOSubmitButton {
+	action = addAdCreative;
+	value = "Add";
+	name = "addButton";
+}
+
+UpdateButton: WOSubmitButton {
+	action = updateAdCreative;
+	value = "Update";
+	name = "updateButton";
+}
+
+FirstItem: WOString {
+	value = displayGroup.indexOfFirstDisplayedObject;
+}
+
+LastItem: WOString {
+	value = displayGroup.indexOfLastDisplayedObject;
+}
+
+TotalItemsFound: WOString {
+	value = displayGroup.allObjects.count;
+}
+
+MultiBatchCondition: WOConditional {
+	condition = displayGroup.hasMultipleBatches;
+}
+
+PreviousBatch: WOHyperlink {
+	action = displayGroup.displayPreviousBatch;
+}
+
+NextBatch: WOHyperlink {
+	action = displayGroup.displayNextBatch;
+}
+
+Repetition2: WORepetition {
+	item = adCreativeItem;
+	list = displayGroup.displayedObjects;
+}
+
+AdCreativeItemIssue: WOString {
+	value = adCreativeItem.issue.date;
+	dateformat = "%b %d, %Y";
+}
+
+AdCreativeItemName: WOString {
+	value = adCreativeItem.name;
+}
+
+AdCreativeItemAdvertiser: WOString {
+	value = adCreativeItem.advertiser.company;
+}
+
+EditLink: WOHyperlink {
+	action = editAdCreative;
+}
+
+DeleteLink: WOHyperlink {
+	action = deleteAdCreative;
+}

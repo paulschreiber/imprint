@@ -1,0 +1,72 @@
+ReaderLiteBar: ReaderLiteBar {}
+
+NoSectionCondition: WOConditional {
+	condition = noSectionFound;
+}
+
+SectionCondition: WOConditional {
+	condition = noSectionFound;
+	negate = true;
+}
+
+StoryRepetition: WORepetition {
+	item = storyItem;
+	list = storyList;
+}
+
+
+Headline: WOString {
+	value = storyItem.headline;
+	escapeHTML = false;
+}
+
+LedeCondition: WOConditional {
+	condition = storyItem.lede.length;
+}
+
+Lede: WOString {
+	value = storyItem.lede;
+	escapeHTML = false;
+}
+
+BylineCondition: WOConditional {
+	condition = storyItem.AuthorNamesText.length;
+}
+
+AuthorName: WOString {
+	value = storyItem.AuthorNamesText;
+}
+
+NoLedeCondition: WOConditional {
+	negate = true;
+	condition = storyItem.lede.length;
+}
+
+LetterCondition: WOConditional {
+	condition = letterList.count;
+}
+
+LetterRepetition: WORepetition {
+	item = storyItem;
+	list = letterList;
+}
+
+LetterHeadline: WOString {
+	value = storyItem.headline;
+}
+
+GraphicLink: WOHyperlink {
+	href = link;
+}
+
+Photo1: WOString {
+	value = photo1;
+}
+
+LetterLink: WOString {
+	value = storyItem.linkLite;
+}
+
+StoryLink: WOString {
+	value = storyItem.linkLite;
+}

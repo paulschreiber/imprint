@@ -1,0 +1,77 @@
+<WEBOBJECT NAME=ReaderTopBar>
+
+	<webobject name=Form1>
+		Find articles matching the folowing criteria:
+
+		<br><br>
+
+		<table border=0 cellpadding=3 cellspacing=0 width="100%">
+			<tr>
+				<td>Headline</td>
+				<td><webobject name=TextField1></webobject></td>
+			</tr>
+			<tr>
+				<td>Article contains</td>
+				<td><webobject name=TextField2></webobject></td>
+			</tr>
+			<tr>
+				<td>Author</td>
+				<td><webobject name=AuthorText></webobject></td>
+			</tr>
+			<tr>
+				<td>Date range</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;&nbsp;from</td>
+				<td><webobject name=StartMonthPopUp></webobject>
+					<webobject name=StartDayPopUp></webobject>
+					<webobject name=StartYearPopUp></webobject></td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;&nbsp;to</td>
+				<td><webobject name=EndMonthPopUp></webobject>
+					<webobject name=EndDayPopUp></webobject>
+					<webobject name=EndYearPopUp></webobject></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><br>
+					<input type=SUBMIT value=Search></td>
+			</tr>
+		</table><P><I>Imprint</I> issues from May 1995 to July 2001 can be found by <A HREF="/search.html">searching the legacy archive</A>.</P><P></P></webobject>
+	<webobject name=Conditional1>
+		<h4>Search results<br></h4>
+
+		<webobject name=HasMultipleBatchesCondition>
+			Matches
+			<webobject name=FirstItem></webobject>
+			to
+			<webobject name=LastItem></webobject>
+			of
+			<webobject name=TotalItemsFound></webobject>
+			.
+			[<webobject name=PreviousBatch>Previous</webobject>
+			| <webobject name=NextBatch>Next</webobject>]
+		</webobject>
+		<br>
+
+		<table border=0 cellpadding=3 cellspacing=0 width="100%">
+			<tr>
+				<th>date</th>
+				<th>section</th>
+				<th>author</th>
+				<th>headline</th>
+			</tr>
+			<webobject name=SearchResults>
+				<tr>
+					<td><webobject name=StoryResultDate></WEBOBJECT></td>
+					<td><webobject name=StoryResultSection></WEBOBJECT></td>
+					<td><webobject name=StoryResultAuthor></WEBOBJECT></td>
+					<td><webobject name=StoryResultLink><webobject name=StoryResultHeadline></webobject></webobject></td>
+				</tr>
+			</webobject>
+		</table>
+		</webobject><WEBOBJECT NAME=NoMatchesCondition>No articles were found matching your criteria.</WEBOBJECT>
+
+</WEBOBJECT>

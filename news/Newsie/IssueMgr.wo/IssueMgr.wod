@@ -1,0 +1,62 @@
+EditToolbar: EditToolbar {}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+IssueDateField: WOTextField {
+	value = issue.date;
+	dateformat = "%Y-%m-%d";
+}
+
+VolumeNumber: WOTextField {
+	value = issue.volumeNumber;
+}
+
+IssueNumber: WOTextField {
+	value = issue.issueNumber;
+}
+
+AddButton: WOSubmitButton {
+	action = addIssue;
+	value = "Add";
+}
+
+UpdateButton: WOSubmitButton {
+	action = updateIssue;
+	value = "Update";
+}
+
+FirstItem: WOString {
+	value = displayGroup.indexOfFirstDisplayedObject;
+}
+
+LastItem: WOString {
+	value = displayGroup.indexOfLastDisplayedObject;
+}
+
+TotalItemsFound: WOString {
+	value = displayGroup.allObjects.count;
+}
+
+PreviousBatch: WOHyperlink {
+	action = displayGroup.displayPreviousBatch;
+}
+
+NextBatch: WOHyperlink {
+	action = displayGroup.displayNextBatch;
+}
+
+ListRepetition: WORepetition {
+	item = issueItem;
+	list = displayGroup.displayedObjects;
+}
+
+IssueDateLink: WOHyperlink {
+	action = editIssue;
+}
+
+IssueDate: WOString {
+	value = issueItem.date;
+	dateformat = "%Y-%m-%d";
+}

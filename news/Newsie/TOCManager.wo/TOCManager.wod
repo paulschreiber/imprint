@@ -1,0 +1,67 @@
+EditToolbar: EditToolbar {}
+
+Form1: WOForm {
+	multipleSubmit = true;
+}
+
+Hyperlink1: WOHyperlink {
+	action = editIssueTOC;
+}
+
+Hyperlink2: WOHyperlink {
+	action = deleteIssueTOC;
+}
+
+ImprintCSS: WOResourceURL {
+    filename="imprint.css"
+}
+
+PopUpButton1: WOPopUpButton {
+	list = issueList;
+	name = "issue";
+	noSelectionString = "[choose issue date]";
+	item = issueItem;
+	displayString = issueItem.prettyDate;
+	selection = issueTOC.issue;
+}
+
+PopUpButton2: WOPopUpButton {
+	list = storyList;
+	name = "story";
+	noSelectionString = "[choose story]";
+	item = storyItem;
+	displayString = storyItem.headline;
+	selection = issueTOC.stories;
+}
+
+PopUpButton3: WOPopUpButton {
+	list = sectionList;
+	name = "section";
+	noSelectionString = "[choose section]";
+	item = sectionItem;
+	displayString = sectionItem.sectionName;
+	selection = issueTOC.section;
+}
+
+Repetition2: WORepetition {
+	item = issueTOCItem;
+	list = issueTOCList;
+}
+
+StoryHeadline: WOString {
+	value = issueTOCItem.stories.headline;
+}
+
+String1: WOString {
+	value = issueTOCItem.issue.prettyDate;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = updateIssueTOC;
+	value = "Update";
+}
+
+SubmitButton2: WOSubmitButton {
+	action = addIssueTOC;
+	value = "Add";
+}

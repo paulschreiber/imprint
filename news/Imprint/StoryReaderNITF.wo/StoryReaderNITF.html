@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nitf>
+<head>
+	<docdata>
+		<date.issue norm="<WEBOBJECT NAME=IssueDate></WEBOBJECT>"/>
+		<WEBOBJECT NAME=ColumnConditional><fixture fix-id="<WEBOBJECT NAME=ColumnName></WEBOBJECT>"/></WEBOBJECT>
+	</docdata>
+	<meta name="storytype" content="<WEBOBJECT NAME=StoryType></WEBOBJECT>" />
+	<meta name="section" content="<WEBOBJECT NAME=SectionName></WEBOBJECT>" />
+</head>
+
+<body>
+	<body.head>
+		<dateline>
+		</dateline>
+		<hedline>
+			<hl1><webobject name=Headline></webobject></hl1>
+			<WEBOBJECT NAME=SubheadConditional><hl2><WEBOBJECT NAME=Subhead></WEBOBJECT></hl2></WEBOBJECT>
+		</hedline>
+		<byline>by <WEBOBJECT NAME=AuthorName></WEBOBJECT>, <byttl><WEBOBJECT NAME=Byline></WEBOBJECT></byttl></byline>
+	</body.head>
+	<body.content>
+		<WEBOBJECT NAME=StoryContents></WEBOBJECT>
+	</body.content>
+</body>
+</nitf>

@@ -1,0 +1,145 @@
+ReaderTopBar: ReaderTopBar {}
+
+Form1: WOForm {
+	multipleSubmit = true;
+	directActionName = "searchResults";
+	actionClass = "DirectAction";
+}
+
+TextField1: WOTextField {
+	value = headline;
+	name = "headline";
+}
+
+TextField2: WOTextField {
+	value = body;
+	name = "body";
+}
+
+AuthorText: WOTextField {
+	value = author;
+	name = "author";
+}
+
+StartMonthPopUp: WOPopUpButton {
+	list = monthList;
+	name = "StartMonth";
+	noSelectionString = "[choose month]";
+	selectedValue = startMonth;
+}
+
+StartDayPopUp: WOPopUpButton {
+	list = dayList;
+	name = "StartDay";
+	noSelectionString = "[choose day]";
+	selectedValue = startDay;
+}
+
+StartYearPopUp: WOPopUpButton {
+	list = yearList;
+	name = "StartYear";
+	noSelectionString = "[choose year]";
+	selectedValue = startYear;
+}
+
+EndMonthPopUp: WOPopUpButton {
+	list = monthList;
+	name = "EndMonth";
+	noSelectionString = "[choose month]";
+	selectedValue = endMonth;
+}
+
+EndDayPopUp: WOPopUpButton {
+	list = dayList;
+	name = "EndDay";
+	noSelectionString = "[choose day]";
+	selectedValue = endDay;
+}
+
+EndYearPopUp: WOPopUpButton {
+	list = yearList;
+	name = "EndYear";
+	noSelectionString = "[choose year]";
+	selectedValue = endYear;
+}
+
+Conditional1: WOConditional {
+	condition = displayGroup.allObjects.count;
+}
+
+HasMultipleBatchesCondition: WOConditional {
+	condition = displayGroup.hasMultipleBatches;
+}
+
+FirstItem: WOString {
+	value = displayGroup.indexOfFirstDisplayedObject;
+}
+
+LastItem: WOString {
+	value = displayGroup.indexOfLastDisplayedObject;
+}
+
+TotalItemsFound: WOString {
+	value = displayGroup.allObjects.count;
+}
+
+PreviousBatch: WOHyperlink {
+	directActionName = "searchResults";
+	actionClass = "DirectAction";
+	?batch = previousBatch;
+	?headline = headline;
+	?body = body;
+	?author = author;
+	?StartMonth = startMonth;
+	?StartDay = startDay;
+	?StartYear = endYear;
+	?EndMonth = endMonth;
+	?EndDay = endDay;
+	?EndYear = endYear;
+}
+
+NextBatch: WOHyperlink {
+	directActionName = "searchResults";
+	actionClass = "DirectAction";
+	?batch = nextBatch;
+	?headline = headline;
+	?body = body;
+	?author = author;
+	?StartMonth = startMonth;
+	?StartDay = startDay;
+	?StartYear = endYear;
+	?EndMonth = endMonth;
+	?EndDay = endDay;
+	?EndYear = endYear;
+}
+
+SearchResults: WORepetition {
+	item = story;
+	list = displayGroup.displayedObjects;
+}
+
+StoryResultDate: WOString {
+	value = story.issue.date;
+	dateformat = "%b %d, %Y";
+}
+
+StoryResultSection: WOString {
+	value = story.section.sectionName;
+}
+
+StoryResultAuthor: WOString {
+	value = story.AuthorNamesText;
+}
+
+StoryResultLink: WOHyperlink {
+	href = story.link;
+}
+
+StoryResultHeadline: WOString {
+	value = story.headline;
+}
+
+NoMatchesCondition: WOConditional {
+	condition = displayGroup.allObjects.count;
+	negate = true;
+}
